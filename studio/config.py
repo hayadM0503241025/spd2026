@@ -6,7 +6,7 @@ import re
 from uuid import uuid4
 import pandas as pd
 from studio.constants import (SCHEMA_VERSION, MAX_DESIGN_BYTES, KINDS, METHODS,
-                              PRIVATE_COLUMNS, OPERATORS, NUMERIC_METHODS)
+                              PRIVATE_COLUMNS, OPERATORS, NUMERIC_METHODS, PIVOT_VISUALS)
 from studio.data import load_shared
 from studio.aggregation import numeric_columns
 from studio.presentation import apply_visual_defaults
@@ -31,6 +31,8 @@ def new_component(dataset='penduduk', kind='kpi', title='Indikator baru', **sett
                 dimension=None, granularity='category', value_column=None, method='count',
                 numerator=[], denominator=[], local_filters=[], color='#16715B', decimals=0,
                 unit='', period='', section='', row=1, position=1, span=1, note='')
+    if kind == 'pivot':
+        item['pivot'] = {'column': None, 'granularity': 'category', 'visualization': 'bar'}
     item.update(settings)
     return item
 
@@ -161,7 +163,8 @@ def check_filter(rule, bundle, global_rule=False):
 
 
 def check_component(item, bundle, columns=3):
-    exact_keys(item, new_component().keys(), 'komponen')
+    require(isinstance(item,dict) and isinstance(item.get('kind'),str) and item['kind'] in KINDS, 'Jenis komponen tidak tersedia.')
+    exact_keys(item, new_component(kind=item['kind']).keys(), 'komponen')
     require(isinstance(item['id'],str) and bool(re.fullmatch('[a-f0-9]{32}',item['id'])), 'ID komponen tidak sah.')
     require(item['dataset'] in bundle.ids, 'Dataset komponen tidak tersedia.')
     require(isinstance(item['kind'],str) and isinstance(item['method'],str) and item['kind'] in KINDS and item['method'] in METHODS, 'Jenis komponen/metode tidak tersedia.')
@@ -174,6 +177,16 @@ def check_component(item, bundle, columns=3):
         require(item[key] is None or isinstance(item[key],str) and len(item[key])<=100, 'Nama kolom tidak sah.')
     require(item['dimension'] not in PRIVATE_COLUMNS, 'Dimensi identitas pribadi disembunyikan.')
     require(item['granularity'] in ('category','day','month','year'), 'Pengelompokan waktu tidak sah.')
+    if item['kind'] == 'pivot':
+        pivot = item['pivot']
+        exact_keys(pivot, ('column','granularity','visualization'), 'pivot')
+        string(pivot['column'], 'Kolom pivot', 100)
+        require(bool(item['dimension']) and bool(pivot['column']) and item['dimension'] != pivot['column'], 'Baris dan kolom pivot wajib dipilih dan berbeda.')
+        require(pivot['column'] not in PRIVATE_COLUMNS, 'Kolom identitas pribadi tidak boleh menjadi dimensi pivot.')
+        require(pivot['granularity'] in ('category','day','month','year'), 'Pengelompokan waktu kolom pivot tidak sah.')
+        require(isinstance(pivot['visualization'],str) and pivot['visualization'] in PIVOT_VISUALS, 'Visualisasi pivot tidak tersedia.')
+        if pivot['visualization']=='stacked':
+            require(item['method'] in ('count','count_filled','sum'), 'Batang bertumpuk membutuhkan jumlah baris, nilai terisi, atau penjumlahan.')
     check_color(item['color'])
     integer(item['decimals'],0,4,'Desimal')
     for key in ('row','position'):

@@ -11,6 +11,7 @@ from studio.config import (new_component, check_component, uid, ordered_componen
 from studio.rendering import render_component, render_dashboard
 from studio.ui_filters import local_filter_editor, filter_manager
 from studio.presentation import DEFAULT_COLUMNS, automatic_color, apply_visual_defaults
+from studio.workspace import open_pivot_editor,clear_pivot_editor,go
 
 
 def index_of(options,value):
@@ -23,7 +24,7 @@ def edit_target(component_id=None):
     st.session_state.pop('component_draft',None)
 
 
-def save_current(bundle,item,existing_id):
+def save_current(bundle,item,existing_id,pivot=False):
     design=st.session_state['design']
     try:
         item=deepcopy(item)
@@ -35,7 +36,11 @@ def save_current(bundle,item,existing_id):
         else:
             design['components'].append(item)
         apply_visual_defaults(design)
-        edit_target()
+        if pivot:
+            clear_pivot_editor()
+            go('Pratinjau')
+        else:
+            edit_target()
         st.session_state['notice']='Komponen disimpan pada sesi kelompok ini.'
     except DesignError as exc:
         st.session_state['notice_error']=str(exc)
@@ -92,7 +97,8 @@ def component_editor(bundle,design):
     left,right=st.columns(2)
     datasets=list(bundle.ids)
     source=left.selectbox('Dataset sumber',datasets,index=index_of(datasets,initial['dataset']),format_func=lambda x:LABELS[x],key=prefix+'_dataset')
-    kind=right.selectbox('Jenis komponen',list(KINDS),index=index_of(list(KINDS),initial['kind']),format_func=lambda x:KINDS[x],key=prefix+'_kind')
+    kinds=[kind for kind in KINDS if kind!='pivot']
+    kind=right.selectbox('Jenis komponen',kinds,index=index_of(kinds,initial['kind']),format_func=lambda x:KINDS[x],key=prefix+'_kind')
     frame=bundle.frame(source)
     prefix=prefix+'_'+source
     item=deepcopy(initial)
@@ -172,7 +178,8 @@ def component_list(bundle,design):
         with st.expander(f"{index+1:02d} · {item['title']} · {KINDS[item['kind']]}"):
             st.caption(LABELS[item['dataset']])
             controls=st.columns(5)
-            controls[0].button('Edit',key='edit_'+item['id'],width='stretch',on_click=edit_target,args=(item['id'],))
+            controls[0].button('Edit',key='edit_'+item['id'],width='stretch',
+                               on_click=open_pivot_editor if item['kind']=='pivot' else edit_target,args=(item['id'],))
             controls[1].button('Duplikasi',key='duplicate_'+item['id'],disabled=len(design['components'])>=80,width='stretch',on_click=change_component,args=('duplicate',item['id']))
             controls[2].button('Naik',key='up_'+item['id'],disabled=index==0,width='stretch',on_click=change_component,args=('move',item['id'],-1))
             controls[3].button('Turun',key='down_'+item['id'],disabled=index==len(design['components'])-1,width='stretch',on_click=change_component,args=('move',item['id'],1))
@@ -212,9 +219,10 @@ def dashboard_settings(design):
 
 def builder(bundle,design):
     st.caption('02 / RUANG RANCANG')
-    title,add=st.columns([4,1])
+    title,add,pivot=st.columns([4,1.5,1.3])
     title.title('Rancang cerita desamu.')
     add.button('Tambah Komponen',type='primary',width='stretch',key='add_component',on_click=edit_target)
+    pivot.button('Tambah Pivot',width='stretch',key='add_pivot',on_click=open_pivot_editor)
     st.write('Data yang sama, sudut pandang kelompokmu. Atur indikator, penyajian, dan susunannya di sini.')
     components,settings,filters=st.tabs(['Komponen','Identitas & tampilan','Filter dashboard'])
     # Apply setting/filter widget values before computing the draft preview.

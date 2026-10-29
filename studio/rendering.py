@@ -3,7 +3,9 @@ from collections import defaultdict
 import base64
 from io import BytesIO
 import streamlit as st
+import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 from studio.aggregation import compute_component, format_id, calculate
 from studio.config import ordered_components
 from studio.ui_filters import render_local_filters
@@ -36,6 +38,9 @@ def render_component(bundle, design, item, key_prefix='canvas', interactive_filt
                 st.metric(item['title'],format_id(result.total,item['decimals'],unit),label_visibility='collapsed')
                 if result.unavailable:
                     st.caption(result.unavailable)
+            elif item['kind']=='pivot':
+                render_pivot_table(result,item)
+                render_pivot_chart(bundle,result,item,key_prefix)
             elif result.table.empty or result.table.Nilai.isna().all():
                 st.info(result.unavailable or 'Tidak tersedia: seluruh nilai per kelompok kosong.')
             elif item['kind']=='table':
@@ -60,6 +65,54 @@ def render_component(bundle, design, item, key_prefix='canvas', interactive_filt
         except (ValueError,KeyError,TypeError) as exc:
             st.warning(f'Komponen perlu diperiksa: {exc}')
             st.caption('Buka Rancang Dashboard → Edit, lalu pilih dataset dan kolom yang tersedia.')
+
+
+def render_pivot_table(result,item):
+    unit='%' if item['method']=='percentage' else item['unit']
+    st.dataframe(result.table.style.format(lambda value:format_id(value,item['decimals'],unit)),width='stretch')
+    st.caption('Total dihitung ulang pada record sumber; rata-rata, nilai unik, dan persentase mengikuti cakupan masing-masing.')
+
+
+def render_pivot_chart(bundle,result,item,key_prefix):
+    if result.cells.empty or result.cells.Nilai.isna().all():
+        st.info(result.unavailable or 'Nilai sel pivot tidak tersedia untuk grafik.')
+        return
+    order=calculate(bundle.frame(item['dataset']),{'method':'count'},item['pivot']['column'],
+                    item['pivot']['granularity']).table.Kategori.map(str).tolist()
+    figure=build_pivot_figure(result,item,order)
+    st.plotly_chart(figure,key=f'{key_prefix}_{item["id"]}_pivot',width='stretch',
+                    config={'displaylogo':False,'scrollZoom':False})
+
+
+def build_pivot_figure(result,item,series_order=None):
+    """Chart the same pivot cells, excluding the recalculated margins."""
+    cells=result.cells.copy()
+    unit='%' if item['method']=='percentage' else item['unit']
+    display=lambda value:format_id(value,item['decimals'],unit)
+    cells['Tampilan']=cells.Nilai.map(display)
+    series_order=list(result.table.columns[:-1]) if series_order is None else series_order
+    colors={label:PALETTE[index%len(PALETTE)] for index,label in enumerate(series_order)}
+    visual=item['pivot']['visualization']
+    if visual=='heatmap':
+        body=result.table.iloc[:-1,:-1]
+        figure=go.Figure(go.Heatmap(x=body.columns.tolist(),y=body.index.tolist(),
+                        z=body.apply(pd.to_numeric).to_numpy(dtype='float64',na_value=float('nan')),
+                        customdata=body.map(display).to_numpy(),colorscale='Viridis',
+                        hovertemplate='%{y} / %{x}<br>%{customdata}<extra></extra>',hoverongaps=False))
+        figure.update_xaxes(title=item['pivot']['column'])
+        figure.update_yaxes(title=item['dimension'],autorange='reversed')
+    else:
+        horizontal=visual=='hbar'
+        figure=px.bar(cells,x='Nilai' if horizontal else 'Baris',y='Baris' if horizontal else 'Nilai',
+                       color='Kolom',orientation='h' if horizontal else 'v',
+                       barmode='relative' if visual=='stacked' else 'group',custom_data=['Tampilan'],
+                       color_discrete_map=colors,category_orders={'Baris':list(result.table.index[:-1]),'Kolom':series_order},
+                       labels={'Baris':item['dimension'],'Kolom':item['pivot']['column'],'Nilai':unit or 'Nilai'})
+        figure.update_traces(hovertemplate=('%{y}' if horizontal else '%{x}')+'<br>%{customdata[0]}<extra>%{fullData.name}</extra>')
+        figure.update_layout(legend=dict(orientation='h',y=-.25,x=0))
+    figure.update_layout(height=350,margin=dict(l=8,r=8,t=12,b=40),paper_bgcolor='rgba(0,0,0,0)',
+                         plot_bgcolor='rgba(0,0,0,0)',font=dict(family='Arial',size=12,color='#324C40'),separators=',.')
+    return figure
 
 
 def build_figure(result,item,category_order=None):

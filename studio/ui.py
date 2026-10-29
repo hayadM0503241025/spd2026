@@ -8,12 +8,12 @@ from studio.rendering import dashboard_header, render_dashboard
 from studio.ui_filters import render_filters
 from studio.validation import profile
 from studio.presentation import kpi_styles
-from studio.workspace import apply_design,go,start_blank,request_action,has_work
+from studio.workspace import apply_design,go,start_blank,request_action,has_work,open_pivot_editor
 from studio.ui_access import group_panel,own_save_panel
 from studio.ui_pivot import pivot_example
 from studio.access import group_access,facilitator_access,logout_facilitator
 
-STAGES=('Beranda','Periksa Data','Rancang Dashboard','Pratinjau','Simpan & Muat','Hasil Kelompok','Panduan')
+STAGES=('Beranda','Periksa Data','Rancang Dashboard','Tambah Pivot','Pratinjau','Simpan & Muat','Hasil Kelompok','Panduan')
 
 
 def styles(primary='#16715B'):
@@ -196,6 +196,7 @@ def guide(bundle):
         {'Bentuk':'Garis','Gunakan untuk':'Tren waktu. Gunakan tanggal pelayanan, dikelompokkan berdasarkan bulan dan tahun.'},
         {'Bentuk':'Pie / donut','Gunakan untuk':'Bagian dari keseluruhan; gunakan sedikit kategori dan ukuran yang dapat dijumlahkan.'},
         {'Bentuk':'Tabel ringkasan','Gunakan untuk':'Membandingkan nilai dengan teliti atau memeriksa angka pada grafik.'},
+        {'Bentuk':'Pivot · tabel & grafik','Gunakan untuk':'Membandingkan dua kategori sekaligus, misalnya dusun dan jenis kelamin. Tambahkan melalui halaman Tambah Pivot.'},
         {'Bentuk':'Catatan','Gunakan untuk':'Menjelaskan temuan, keterbatasan, atau rekomendasi kelompok.'},
     ],hide_index=True,width='stretch')
     st.subheader('Sepakati arti angka')
@@ -204,6 +205,7 @@ def guide(bundle):
     st.subheader('Filter mempunyai cakupan')
     st.write('Di Rancang Dashboard → Filter dashboard, cukup pilih kolom. Seluruh isi kolom otomatis tersedia di Pratinjau. Misalnya Dusun menyediakan Dusun I sampai V tanpa mengetik pilihan tersebut. Pilihan kosong berarti semua data. Nama dataset pada pilihan kolom menunjukkan cakupannya: Dusun berlaku untuk penduduk dan pelayanan, sedangkan alamat UMKM/potensi tetap kolom terpisah. Filter khusus komponen juga cukup dipilih kolomnya; nilainya dipilih pada komponen tersebut di Pratinjau.')
     pivot_example(bundle)
+    st.button('Rancang Pivot Kelompok',key='guide_add_pivot',on_click=open_pivot_editor)
     st.subheader('Latihan dengan CSV sintetis')
     st.caption('Berkas berikut terpisah dari data dasar bersama. Hanya untuk mempelajari struktur data; tidak dapat mengganti dataset latihan aplikasi.')
     for name in ('penduduk','pelayanan','umkm','potensi'):

@@ -1,5 +1,5 @@
 """Single calculation engine for KPIs, tables and all chart types."""
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import math
 import pandas as pd
 from studio.constants import NUMERIC_METHODS, NON_MEASURES, PRIVATE_COLUMNS, METHODS, LABELS
@@ -55,6 +55,11 @@ class Result:
     unavailable: str | None = None
 
 
+@dataclass
+class PivotResult(Result):
+    cells: pd.DataFrame = field(default_factory=pd.DataFrame)
+
+
 def calculate(frame, spec, dimension=None, granularity='category'):
     total = scalar(frame, spec)
     if dimension:
@@ -108,15 +113,67 @@ def count_pivot(frame, rows, columns):
                           margins_name=total_label, observed=True)
 
 
+def pivot_labels(frame, column, granularity='category'):
+    if column not in frame:
+        raise IndicatorError(f'Kolom dimensi pivot {column} tidak tersedia. Edit pemetaan pivot.')
+    if column in PRIVATE_COLUMNS:
+        raise IndicatorError('Identitas pribadi tidak boleh menjadi dimensi pivot.')
+    values = frame[column]
+    if granularity != 'category':
+        if granularity not in ('day','month','year') or not pd.api.types.is_datetime64_any_dtype(values):
+            raise IndicatorError('Pengelompokan waktu pivot membutuhkan kolom tanggal.')
+        values = values.dt.to_period({'day':'D','month':'M','year':'Y'}[granularity])
+    return values.astype('string').fillna('(Kosong)')
+
+
+def calculate_pivot(frame, spec, rows, columns, row_granularity='category', column_granularity='category'):
+    if rows == columns:
+        raise IndicatorError('Pilih kolom berbeda untuk baris dan kolom pivot.')
+    row_values = pivot_labels(frame, rows, row_granularity).reset_index(drop=True)
+    column_values = pivot_labels(frame, columns, column_granularity).reset_index(drop=True)
+    total = scalar(frame, spec)
+    if frame.empty:
+        return PivotResult(total, pd.DataFrame(), 0, '', 'Tidak ada data sesuai filter.')
+    if row_values.nunique() * column_values.nunique() > 25000:
+        raise IndicatorError('Pivot terlalu besar. Pilih kategori yang lebih ringkas atau persempit filter.')
+    total_label = 'Total'
+    while row_values.eq(total_label).any() or column_values.eq(total_label).any():
+        total_label += ' keseluruhan'
+    data = pd.DataFrame({'Baris':row_values, 'Kolom':column_values, 'Record':range(len(frame))})
+    # Each cell AND each margin calls the same scalar engine as a KPI. In
+    # particular, means, distinct counts and percentages are recalculated
+    # from source records rather than added from already aggregated cells.
+    table = pd.pivot_table(data, index='Baris', columns='Kolom', values='Record',
+                          aggfunc=lambda positions: scalar(frame.iloc[positions.to_numpy(dtype='int64')], spec),
+                          margins=True, margins_name=total_label, observed=True, dropna=False,
+                          fill_value=0 if spec['method'] in ('count','count_filled','nunique') else None)
+    row_order = calculate(frame, {'method':'count'}, rows, row_granularity).table.Kategori.map(str).tolist()
+    column_order = calculate(frame, {'method':'count'}, columns, column_granularity).table.Kategori.map(str).tolist()
+    table = table.reindex(index=row_order+[total_label], columns=column_order+[total_label])
+    table.index.name, table.columns.name = rows, columns
+    body = table.iloc[:-1, :-1].rename_axis(index='Baris', columns='Kolom')
+    cells = body.reset_index().melt(id_vars='Baris', var_name='Kolom', value_name='Nilai')
+    cells['Nilai'] = pd.to_numeric(cells.Nilai)
+    unavailable = None if total is not None else ('Penyebut nol; persentase tidak tersedia.'
+                    if spec['method']=='percentage' else 'Seluruh nilai kosong; tidak diubah menjadi nol.')
+    return PivotResult(total, table, len(frame), '', unavailable, cells)
+
+
 def compute_component(bundle, design, component):
     dataset = component['dataset']
     frame = apply_filters(bundle.frame(dataset), dataset, design['filters'], component['local_filters'])
-    dimension = None if component['kind'] in ('kpi', 'note') else component['dimension']
-    result = calculate(frame, component, dimension, component['granularity'])
+    if component['kind'] == 'pivot':
+        result = calculate_pivot(frame, component, component['dimension'], component['pivot']['column'],
+                                 component['granularity'], component['pivot']['granularity'])
+    else:
+        dimension = None if component['kind'] in ('kpi', 'note') else component['dimension']
+        result = calculate(frame, component, dimension, component['granularity'])
     scope = describe_filters(dataset, design['filters'], component['local_filters'])
     unit = '%' if component['method'] == 'percentage' else component['unit'] or 'tanpa satuan'
     value = f" ({component['value_column']})" if component['value_column'] else ''
     result.explanation = f"Sumber: {LABELS[dataset]}. Metode: {METHODS[component['method']]}{value}. Satuan: {unit}. Cakupan: {scope}. Record dalam cakupan: {len(frame)}."
+    if component['kind'] == 'pivot':
+        result.explanation += f" Baris pivot: {component['dimension']}; kolom pivot: {component['pivot']['column']}. Total dihitung ulang dari record sumber dalam cakupan. Grafik memakai sel pivot tanpa baris/kolom Total."
     if component['method'] == 'percentage':
         result.explanation += f" Pembilang: {component['numerator'] or 'semua record'}; penyebut: {component['denominator'] or 'semua record dalam cakupan'}. Pembilang dibatasi pada cakupan penyebut."
     if dataset == 'pelayanan' and component['value_column'] == 'lama_proses':

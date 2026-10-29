@@ -155,6 +155,19 @@ Ganti baris/kolom menjadi pendidikan, pekerjaan, atau kelompok usia untuk mencob
 
 **Lihat kode Python pivot** menampilkan contoh `pd.pivot_table()` yang mengikuti pilihan saat ini dan versi data yang dipakai. Pilihan latihan berada di sesi masing-masing serta dipertahankan saat berpindah halaman. Contoh ini berada di Panduan; konfigurasi JSON tetap menyimpan komponen yang dibuat melalui builder.
 
+### Menambahkan pivot ke dashboard
+
+1. Buka **Rancang Dashboard → Tambah Pivot**, atau **Tambah Pivot** pada sidebar. Halaman khusus pivot memakai draft sesi kelompok yang sedang dibuka.
+2. Pilih **Dataset sumber pivot**: Penduduk, Pelayanan, UMKM, atau Potensi desa. Pilih **Baris pivot** dan **Kolom pivot** yang berbeda. Untuk kolom tanggal, pilih pengelompokan bulan/tahun/tanggal.
+3. Bawaan nilai pivot adalah **Jumlah baris**. Buka **Nilai & filter pivot** bila ingin memilih metode lain, kolom nilai, satuan, atau kolom filter khusus. Nilai filter dipilih melalui tombol **Filter**. Filter dashboard juga berlaku sesuai dataset sumbernya.
+4. Klik **Tampilkan Pivot**. Tabel ditampilkan terlebih dahulu; perubahan sumber, baris/kolom, atau metode perlu ditampilkan kembali sebelum ditambahkan.
+5. Pilih **Visualisasi pivot**: batang berkelompok, batang bertumpuk, batang horizontal, atau heatmap. Batang bertumpuk tersedia untuk jumlah baris, nilai terisi, dan penjumlahan.
+6. Klik **Tambahkan ke Dashboard**. Aplikasi membuka **Pratinjau** dan menampilkan **tabel pivot beserta grafiknya** sebagai satu komponen. Keduanya memakai hasil perhitungan dan filter yang sama. Grafik menampilkan sel pivot; baris/kolom Total tersedia pada tabel.
+
+Di **Susunan dashboard**, **Edit** pada pivot membuka kembali halaman pivot; **Simpan perubahan pivot** memperbarui komponen yang sama. Duplikasi menyalin tabel, visualisasi, dan filter secara mandiri. Urutan/hapus berlaku pada pasangan tabel dan grafik. Pivot juga muncul pada kanvas, mode presentasi, dan hasil kelompok yang ditinjau fasilitator.
+
+Definisi pivot mencakup dataset, baris/kolom beserta pengelompokan waktu, metode, kolom nilai, pilihan grafik, dan filter. Definisi tersebut disertakan dalam JSON dan hasil tersimpan kelompok. Saat dimuat, aplikasi menghitung ulang tabel dan grafik dari dataset bersama yang cocok. JSON lama tetap dapat digunakan. Draft yang belum ditambahkan dipertahankan saat berpindah halaman; simpan ke dashboard terlebih dahulu agar ikut JSON/hasil kelompok.
+
 ### Ketepatan indikator
 
 Satu mesin `studio/aggregation.py` dipakai oleh KPI, grafik, dan tabel. Grafik mengubah penyajian, bukan rumus. Dengan dataset, definisi, metode, dan filter sama, total indikator akan sama antarkelompok.
@@ -226,6 +239,7 @@ studio/workspace.py            transisi draft dan konfirmasi penggantian
 studio/rendering.py            rendering KPI, Plotly, tabel, catatan dan grid
 studio/ui*.py                  beranda, builder, filter, simpan/muat, panduan
 studio/ui_pivot.py              contoh pivot interaktif dan kode Python di Panduan
+studio/ui_pivot_builder.py      halaman tambah/edit pivot: tabel dan grafik dalam satu komponen
 data/shared/<versi>/           baseline CSV terolah dan manifest
 data/registry.json             versi aktif dan katalog versi yang tersedia
 data/examples/                 empat CSV sintetis untuk pembelajaran

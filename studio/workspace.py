@@ -6,7 +6,8 @@ from studio.config import new_design,new_component
 
 def apply_design(design):
     for key in list(st.session_state):
-        if key.startswith('w_') or key in ('editing_id','editor_epoch','component_draft'):
+        if key.startswith('w_') or key in ('editing_id','editor_epoch','component_draft',
+                                          'pivot_editing_id','pivot_editor_epoch','pivot_draft','pivot_ready_signature'):
             del st.session_state[key]
     st.session_state['design']=deepcopy(design)
 
@@ -15,13 +16,26 @@ def go(stage):
     st.session_state['_next_stage']=stage
 
 
+def clear_pivot_editor():
+    for key in ('pivot_draft','pivot_editing_id','pivot_ready_signature'):
+        st.session_state.pop(key,None)
+    st.session_state['pivot_editor_epoch']=st.session_state.get('pivot_editor_epoch',0)+1
+
+
+def open_pivot_editor(component_id=None):
+    if st.session_state.get('pivot_editing_id') != component_id:
+        clear_pivot_editor()
+    st.session_state['pivot_editing_id']=component_id
+    go('Tambah Pivot')
+
+
 def has_work():
     design=st.session_state['design']
     draft=st.session_state.get('component_draft')
     defaults=new_component()
     fields=('dataset','kind','title','description','question','dimension','method','value_column','numerator','denominator','local_filters','unit','note')
     changed=bool(draft and any(draft.get(field)!=defaults[field] for field in fields))
-    return bool(design['components'] or design['filters'] or changed)
+    return bool(design['components'] or design['filters'] or changed or st.session_state.get('pivot_draft'))
 
 
 def request_action(kind,**details):

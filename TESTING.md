@@ -22,6 +22,22 @@ Seluruh suite Python dijalankan ulang setelah menambahkan contoh pivot di Pandua
 
 Pengujian tambahan memeriksa jumlah penduduk per dusun dan jenis kelamin, kesamaan total pivot dengan indikator Jumlah baris, kategori kosong, benturan label Total, cakupan kosong, penolakan dimensi pribadi/tidak tersedia, dan sumber yang tetap utuh. AppTest memeriksa filter dusun, perubahan baris/kolom, pemulihan pilihan setelah navigasi, eksekusi contoh kode yang menghasilkan tabel sama, serta dua sesi dengan pilihan berbeda tanpa mengubah desain dashboard. Pemeriksaan ini belum mencakup tampilan browser nyata.
 
+### Pivot sebagai komponen dashboard — 30 Oktober 2026
+
+Sesudah menambahkan halaman Tambah Pivot, seluruh suite Python kembali lulus: **95 passed, 2 warnings in 32.72s**. Perintah menggunakan `-q --tb=short --maxfail=3 -p no:cacheprovider` dan `--basetemp` yang menunjuk direktori baru di `outputs/`.
+
+Pengujian tambahan mencakup:
+
+- Pemilihan keempat dataset, baris/kolom, tampilan tabel sebelum pilihan grafik, dan penambahan ke Pratinjau dengan tabel serta grafik bersama. Pasangan tersebut juga tampil dalam mode presentasi.
+- Grafik batang berkelompok, bertumpuk, horizontal, serta heatmap memakai sel pivot yang sama dan mengecualikan total dari grafik.
+- Sembilan metode perhitungan: sel serta total baris/kolom memakai mesin indikator yang sama, termasuk rata-rata berbobot oleh record, jumlah unik, dan persentase. Index sumber yang berulang tidak menggandakan record.
+- Pengelompokan tanggal lintas tahun, kategori kosong, semua ukuran kosong, penyebut nol, serta cakupan tanpa record.
+- Edit mempertahankan ID; duplikasi memisahkan konfigurasi; draft bertahan setelah navigasi; draft komponen biasa tetap utuh; bersihkan pekerjaan memerlukan konfirmasi.
+- Dua sesi menggunakan dataset yang sama dengan desain/filter berbeda. Saat metode dan filter disamakan, total kedua sesi sama walau bentuk grafik berbeda.
+- Filter global dan lokal beririsan, JSON memuat kembali pivot, dan penyimpanan hasil kelompok mempertahankan konfigurasinya. Komponen JSON lama tetap dapat dimuat. Kolom pribadi dan konfigurasi pivot tidak sah ditolak.
+
+Browser dicoba kembali melalui skill Browser, tetapi tidak ada browser yang tersedia. Alur di atas diuji melalui AppTest dan perhitungan/objek grafik, belum melalui pemeriksaan visual browser langsung. Tidak ada data dasar atau hasil kelompok nyata yang diubah oleh pengujian.
+
 | Pemeriksaan | Hasil |
 | --- | --- |
 | Jumlah baris, nilai terisi, nilai unik, dan KK unik | Lulus |

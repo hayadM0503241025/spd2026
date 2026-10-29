@@ -4,6 +4,7 @@ from studio.data import load_shared, DatasetError
 from studio.config import new_design, retire_untouched_example
 from studio.ui import styles, sidebar, home, inspection, preview, save_load, guide, apply_design
 from studio.ui_builder import builder
+from studio.ui_pivot_builder import pivot_builder
 from studio.presentation import apply_visual_defaults
 from studio.access import get_store,sync_browser
 from studio.ui_access import bind_group,results_page
@@ -75,6 +76,8 @@ else:
             inspection(bundle)
         elif page=='Rancang Dashboard':
             builder(bundle,design)
+        elif page=='Tambah Pivot':
+            pivot_builder(bundle,design)
         elif page=='Pratinjau':
             preview(bundle,design)
         elif page=='Simpan & Muat':

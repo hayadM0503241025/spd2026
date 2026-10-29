@@ -18,7 +18,11 @@ KINDS = MappingProxyType({
     'kpi': 'Kartu indikator', 'bar': 'Batang vertikal',
     'hbar': 'Batang horizontal', 'line': 'Grafik garis',
     'pie': 'Pie', 'donut': 'Donut', 'table': 'Tabel ringkasan',
-    'note': 'Catatan',
+    'note': 'Catatan', 'pivot': 'Pivot · tabel & grafik',
+})
+PIVOT_VISUALS = MappingProxyType({
+    'bar': 'Batang berkelompok', 'stacked': 'Batang bertumpuk',
+    'hbar': 'Batang horizontal', 'heatmap': 'Peta warna (heatmap)',
 })
 PRIVATE_COLUMNS = frozenset({'nik', 'no_kk', 'nama', 'nama_lengkap', 'tanggal_lahir', 'ID'})
 NUMERIC_METHODS = frozenset({'sum', 'mean', 'median', 'min', 'max'})
