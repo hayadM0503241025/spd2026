@@ -10,6 +10,16 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _matches_csv_hash(payload: bytes, expected: str) -> bool:
+    """Accept Git's LF/CRLF checkout conversion while checking all CSV content."""
+    lf_payload = payload.replace(b'\r\n', b'\n')
+    crlf_payload = lf_payload.replace(b'\n', b'\r\n')
+    return any(
+        hashlib.sha256(candidate).hexdigest() == expected
+        for candidate in (payload, lf_payload, crlf_payload)
+    )
+
+
 class DatasetError(ValueError):
     pass
 
@@ -65,7 +75,7 @@ def load_shared(version: str | None = None) -> SharedBundle:
         if not re.fullmatch(r'[a-z]+\.csv', spec['file']):
             raise DatasetError('Nama berkas dataset tidak sah.')
         payload = (folder / spec['file']).read_bytes()
-        if hashlib.sha256(payload).hexdigest() != spec['sha256']:
+        if not _matches_csv_hash(payload, spec['sha256']):
             raise DatasetError(f'Integritas dataset {dataset} berubah. Siapkan versi baru; jangan menimpa versi lama.')
         payloads.append((dataset, payload))
     return SharedBundle(manifest_text, tuple(payloads))
