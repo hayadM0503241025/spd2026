@@ -1,0 +1,13 @@
+ID,nik,jenis_kelamin,usia,kelompok_usia,pendidikan,pekerjaan,dusun,no_kk
+1,SIM-NIK-001,Perempuan,21,15–59 tahun,SMP,Pedagang,Dusun Contoh B,SIM-KK-001
+2,SIM-NIK-002,Laki-laki,24,15–59 tahun,S1,Pelajar,Dusun Contoh A,SIM-KK-001
+3,SIM-NIK-003,Perempuan,27,15–59 tahun,SMA,Petani,Dusun Contoh B,SIM-KK-002
+4,SIM-NIK-004,Laki-laki,30,15–59 tahun,SMP,Pedagang,Dusun Contoh A,SIM-KK-002
+5,SIM-NIK-005,Perempuan,33,15–59 tahun,S1,Pelajar,Dusun Contoh B,SIM-KK-003
+6,SIM-NIK-006,Laki-laki,36,15–59 tahun,SMA,Petani,Dusun Contoh A,SIM-KK-003
+7,SIM-NIK-007,Perempuan,39,15–59 tahun,SMP,Pedagang,Dusun Contoh B,SIM-KK-004
+8,SIM-NIK-008,Laki-laki,42,15–59 tahun,S1,Pelajar,Dusun Contoh A,SIM-KK-004
+9,SIM-NIK-009,Perempuan,45,15–59 tahun,SMA,Petani,Dusun Contoh B,SIM-KK-005
+10,SIM-NIK-010,Laki-laki,48,15–59 tahun,SMP,Pedagang,Dusun Contoh A,SIM-KK-005
+11,SIM-NIK-011,Perempuan,51,15–59 tahun,S1,Pelajar,Dusun Contoh B,SIM-KK-006
+12,SIM-NIK-012,Laki-laki,54,15–59 tahun,SMA,Petani,Dusun Contoh A,SIM-KK-006

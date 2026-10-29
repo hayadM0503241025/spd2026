@@ -1,0 +1,7 @@
+ID,nama_umkm,alamat,latitude,longitude,jenis_usaha,produk,omset
+1,Usaha Simulasi 1,Dusun Contoh A,-6.501,106.70100000000001,Kerajinan,Produk simulasi 1,1000000
+2,Usaha Simulasi 2,Dusun Contoh B,-6.502,106.702,Jasa,Produk simulasi 2,2000000
+3,Usaha Simulasi 3,Dusun Contoh A,-6.503,106.703,Kuliner,Produk simulasi 3,3000000
+4,Usaha Simulasi 4,Dusun Contoh B,-6.504,106.70400000000001,Kerajinan,Produk simulasi 4,4000000
+5,Usaha Simulasi 5,Dusun Contoh A,-6.505,106.705,Jasa,Produk simulasi 5,5000000
+6,Usaha Simulasi 6,Dusun Contoh B,-6.506,106.706,Kuliner,Produk simulasi 6,6000000

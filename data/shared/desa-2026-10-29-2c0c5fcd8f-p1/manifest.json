@@ -1,0 +1,235 @@
+{
+  "version": "desa-2026-10-29-2c0c5fcd8f-p1",
+  "source_file": "Template Database & Dashboard Pelayanan Desa (MK Kombangdes).xlsx",
+  "source_sha256": "2c0c5fcd8f9ae2149961aa36a5069bd1645127aa9ba2ed8d78e89c387319b4b5",
+  "label": "Data latihan bersama dari workbook referensi",
+  "processing": {
+    "revision": "p1",
+    "age_reference": "2026-10-29",
+    "ages": "tahun penuh; 0–14 / 15–59 / 60+",
+    "identities": "teks 16 digit valid saja; token konsisten; numerik tidak valid",
+    "coordinates": "rentang sah saja; tidak ditebak",
+    "formulas": "diabaikan; usia/kelompok/bulan dihitung ulang",
+    "privacy": "nama dan tanggal lahir dihapus; NIK/KK diganti token",
+    "categories": "rapikan spasi; tidak menebak padanan kategori"
+  },
+  "datasets": {
+    "penduduk": {
+      "sheet": "Data_Penduduk",
+      "file": "penduduk.csv",
+      "rows": 1019,
+      "sha256": "d2150df0057095636e22a80bfdb716d3381381890b07d18da468302b483fe116",
+      "dates": [],
+      "dtypes": {
+        "ID": "string",
+        "nik": "string",
+        "jenis_kelamin": "string",
+        "usia": "Float64",
+        "kelompok_usia": "string",
+        "pendidikan": "string",
+        "pekerjaan": "string",
+        "dusun": "string",
+        "no_kk": "string"
+      },
+      "reports": [
+        {
+          "level": "info",
+          "message": "1019 record sumber; 28 baris kosong/rumus saja dikeluarkan."
+        },
+        {
+          "level": "warning",
+          "message": "1 nik bukan teks 16 digit: ditandai tidak valid dan dikeluarkan dari hitungan identitas unik. Identitas valid diganti token konsisten."
+        },
+        {
+          "level": "warning",
+          "message": "19 no_kk bukan teks 16 digit: ditandai tidak valid dan dikeluarkan dari hitungan identitas unik. Identitas valid diganti token konsisten."
+        },
+        {
+          "level": "info",
+          "message": "Usia dan kelompok usia dihitung ulang dari tanggal lahir pada 2026-10-29; formula/cache usia diabaikan. Tanggal lahir dan nama dihapus dari berkas latihan."
+        },
+        {
+          "level": "info",
+          "message": "0 dugaan duplikasi record lengkap; tidak dihapus otomatis."
+        }
+      ],
+      "removed_rows": 28,
+      "missing": {
+        "ID": 0,
+        "nik": 1,
+        "jenis_kelamin": 0,
+        "usia": 0,
+        "kelompok_usia": 0,
+        "pendidikan": 0,
+        "pekerjaan": 0,
+        "dusun": 0,
+        "no_kk": 19
+      },
+      "column_mapping": {
+        "ID": "ID",
+        "nik": "nik",
+        "jenis_kelamin": "jenis_kelamin",
+        "usia": "usia",
+        "kelompok_usia": "kelompok_usia",
+        "pendidikan": "pendidikan",
+        "pekerjaan": "pekerjaan",
+        "dusun": "dusun",
+        "no_kk": "no_kk"
+      }
+    },
+    "pelayanan": {
+      "sheet": "Data_Pelayanan",
+      "file": "pelayanan.csv",
+      "rows": 20,
+      "sha256": "425e32e3711947f0a113acdd532fb507bac429de7cb9cf92bce2387a5041d2e1",
+      "dates": [
+        "tanggal"
+      ],
+      "dtypes": {
+        "ID": "string",
+        "bulan": "string",
+        "jenis_layanan": "string",
+        "dusun": "string",
+        "status": "string",
+        "lama_proses": "Float64"
+      },
+      "reports": [
+        {
+          "level": "info",
+          "message": "20 record sumber; 979 baris kosong/rumus saja dikeluarkan."
+        },
+        {
+          "level": "info",
+          "message": "Bulan diturunkan ulang dari tanggal sebagai YYYY-MM; tahun yang berbeda tidak digabung."
+        },
+        {
+          "level": "info",
+          "message": "0 dugaan duplikasi record lengkap; tidak dihapus otomatis."
+        }
+      ],
+      "removed_rows": 979,
+      "missing": {
+        "ID": 0,
+        "tanggal": 0,
+        "bulan": 0,
+        "jenis_layanan": 0,
+        "dusun": 0,
+        "status": 0,
+        "lama_proses": 0
+      },
+      "column_mapping": {
+        "ID": "ID",
+        "tanggal": "tanggal",
+        "bulan": "bulan",
+        "jenis_layanan": "jenis_layanan",
+        "dusun": "dusun",
+        "status": "status",
+        "lama_proses": "lama_proses"
+      }
+    },
+    "umkm": {
+      "sheet": "Data_UMKM",
+      "file": "umkm.csv",
+      "rows": 15,
+      "sha256": "b5dbffa46ccbb880a18131692b96c97a909a24b5742879b8804b7f5649049906",
+      "dates": [],
+      "dtypes": {
+        "ID": "string",
+        "nama_umkm": "string",
+        "alamat": "string",
+        "latitude": "Float64",
+        "longitude": "Float64",
+        "jenis_usaha": "string",
+        "produk": "string",
+        "omset": "Float64"
+      },
+      "reports": [
+        {
+          "level": "info",
+          "message": "15 record sumber; 984 baris kosong/rumus saja dikeluarkan."
+        },
+        {
+          "level": "warning",
+          "message": "15 pasangan koordinat di luar rentang/tidak lengkap dikosongkan. Tidak dilakukan pembagian atau koreksi dugaan."
+        },
+        {
+          "level": "info",
+          "message": "0 dugaan duplikasi record lengkap; tidak dihapus otomatis."
+        }
+      ],
+      "removed_rows": 984,
+      "missing": {
+        "ID": 0,
+        "nama_umkm": 0,
+        "alamat": 0,
+        "latitude": 15,
+        "longitude": 15,
+        "jenis_usaha": 0,
+        "produk": 0,
+        "omset": 0
+      },
+      "column_mapping": {
+        "ID": "ID",
+        "nama_umkm": "nama_umkm",
+        "alamat": "alamat",
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "jenis_usaha": "jenis_usaha",
+        "produk": "produk",
+        "omset": "omset"
+      }
+    },
+    "potensi": {
+      "sheet": "Potensi_Desa",
+      "file": "potensi.csv",
+      "rows": 8,
+      "sha256": "db0e5b2356052755a270842f6a005b81b1c2242e61a20e568fb911fa511d4cbf",
+      "dates": [],
+      "dtypes": {
+        "ID": "string",
+        "potensi": "string",
+        "alamat": "string",
+        "latitude": "Float64",
+        "longitude": "Float64",
+        "kategori": "string",
+        "kondisi": "string",
+        "keterangan": "string"
+      },
+      "reports": [
+        {
+          "level": "info",
+          "message": "8 record sumber; 991 baris kosong/rumus saja dikeluarkan."
+        },
+        {
+          "level": "warning",
+          "message": "8 pasangan koordinat di luar rentang/tidak lengkap dikosongkan. Tidak dilakukan pembagian atau koreksi dugaan."
+        },
+        {
+          "level": "info",
+          "message": "0 dugaan duplikasi record lengkap; tidak dihapus otomatis."
+        }
+      ],
+      "removed_rows": 991,
+      "missing": {
+        "ID": 0,
+        "potensi": 0,
+        "alamat": 0,
+        "latitude": 8,
+        "longitude": 8,
+        "kategori": 0,
+        "kondisi": 0,
+        "keterangan": 0
+      },
+      "column_mapping": {
+        "ID": "ID",
+        "potensi": "potensi",
+        "alamat": "alamat",
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "kategori": "kategori",
+        "kondisi": "kondisi",
+        "keterangan": "keterangan"
+      }
+    }
+  }
+}

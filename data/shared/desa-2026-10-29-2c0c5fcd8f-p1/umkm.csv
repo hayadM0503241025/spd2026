@@ -1,0 +1,16 @@
+ID,nama_umkm,alamat,latitude,longitude,jenis_usaha,produk,omset
+1.0,Warung Bu Siti,Dusun I,,,Kuliner,Nasi Campur,5000000.0
+2.0,Toko Makmur,Dusun II,,,Perdagangan,Sembako,12000000.0
+3.0,Kerajinan Bambu Jaya,Dusun III,,,Kerajinan,Anyaman Bambu,3000000.0
+4.0,Bengkel Motor Maju,Dusun IV,,,Jasa,Servis Motor,7000000.0
+5.0,Tani Subur,Dusun V,,,Pertanian,Bibit Sayuran,4500000.0
+6.0,Kedai Kopi Desa,Dusun I,,,Kuliner,Kopi Bubuk,6000000.0
+7.0,Kios Pulsa Amanah,Dusun II,,,Perdagangan,Pulsa & Token,3500000.0
+8.0,Batik Tulis Lestari,Dusun III,,,Kerajinan,Kain Batik,8000000.0
+9.0,Jasa Jahit Rapi,Dusun IV,,,Jasa,Pakaian,2500000.0
+10.0,Pupuk Organik Mandiri,Dusun V,,,Pertanian,Pupuk Kompos,5500000.0
+11.0,Warung Sate Cak Kumis,Dusun I,,,Kuliner,Sate Ayam,7500000.0
+12.0,Mini Market Desa,Dusun II,,,Perdagangan,Kebutuhan Harian,15000000.0
+13.0,Souvenir Kayu Manis,Dusun III,,,Kerajinan,Gantungan Kunci,2000000.0
+14.0,Pangkas Rambut Gaya,Dusun IV,,,Jasa,Potong Rambut,3000000.0
+15.0,Ternak Lele Berkah,Dusun V,,,Pertanian,Ikan Lele,9000000.0

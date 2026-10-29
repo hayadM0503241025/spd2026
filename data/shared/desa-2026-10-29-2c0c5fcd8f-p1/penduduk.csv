@@ -1,0 +1,1020 @@
+ID,nik,jenis_kelamin,usia,kelompok_usia,pendidikan,pekerjaan,dusun,no_kk
+1.0,NIK-000001,Laki-laki,36.0,15–59 tahun,SMA/SMK,Petani,Dusun I,
+2.0,NIK-000002,Laki-laki,31.0,15–59 tahun,S1,Guru,Dusun II,
+3.0,NIK-000003,Perempuan,41.0,15–59 tahun,SMP,Pedagang,Dusun III,
+4.0,NIK-000004,Perempuan,56.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,
+5.0,NIK-000005,Laki-laki,26.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun V,
+6.0,NIK-000006,Laki-laki,16.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun I,
+7.0,NIK-000007,Perempuan,46.0,15–59 tahun,S1,Perangkat Desa,Dusun II,
+8.0,NIK-000008,Laki-laki,34.0,15–59 tahun,SMA/SMK,Buruh,Dusun III,
+9.0,NIK-000009,Perempuan,61.0,60+ tahun,Tidak/Belum Sekolah,Ibu Rumah Tangga,Dusun IV,
+11.0,NIK-000010,Perempuan,32.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,
+12.0,NIK-000011,Laki-laki,50.0,15–59 tahun,SD,Petani,Dusun II,
+13.0,NIK-000012,Perempuan,21.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun III,
+14.0,NIK-000013,Laki-laki,44.0,15–59 tahun,S1,Guru,Dusun IV,
+15.0,NIK-000014,Perempuan,28.0,15–59 tahun,Diploma,Perangkat Desa,Dusun V,
+16.0,NIK-000015,Laki-laki,49.0,15–59 tahun,SMP,Buruh,Dusun I,
+17.0,NIK-000016,Perempuan,66.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun II,
+18.0,NIK-000017,Laki-laki,35.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun III,
+19.0,NIK-000018,Perempuan,40.0,15–59 tahun,S1,Pedagang,Dusun IV,
+20.0,,Laki-laki,24.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun V,
+22.0,NIK-000019,Laki-laki,39.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000001
+23.0,NIK-000020,Laki-laki,70.0,60+ tahun,S1,Petani,Dusun V,KK-000002
+24.0,NIK-000021,Laki-laki,33.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000002
+25.0,NIK-000022,Perempuan,63.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000002
+26.0,NIK-000023,Perempuan,27.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000003
+27.0,NIK-000024,Perempuan,58.0,15–59 tahun,SD,Guru,Dusun IV,KK-000003
+28.0,NIK-000025,Laki-laki,21.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000003
+29.0,NIK-000026,Laki-laki,52.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000004
+30.0,NIK-000027,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000004
+31.0,NIK-000028,Laki-laki,46.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000004
+32.0,NIK-000029,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000005
+33.0,NIK-000030,Perempuan,40.0,15–59 tahun,S1,Guru,Dusun V,KK-000005
+34.0,NIK-000031,Perempuan,71.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000005
+35.0,NIK-000032,Laki-laki,34.0,15–59 tahun,SMP,Petani,Dusun II,KK-000006
+36.0,NIK-000033,Laki-laki,65.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000006
+37.0,NIK-000034,Laki-laki,27.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000006
+38.0,NIK-000035,Laki-laki,59.0,15–59 tahun,S1,Buruh,Dusun V,KK-000007
+39.0,NIK-000036,Perempuan,22.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000007
+40.0,NIK-000037,Perempuan,53.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000007
+41.0,NIK-000038,Perempuan,16.0,15–59 tahun,Diploma,Pelajar/Mahasiswa,Dusun III,KK-000008
+42.0,NIK-000039,Laki-laki,46.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000008
+43.0,NIK-000040,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000008
+44.0,NIK-000041,Laki-laki,41.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000009
+45.0,NIK-000042,Laki-laki,72.0,60+ tahun,SMP,Guru,Dusun II,KK-000009
+46.0,NIK-000043,Laki-laki,35.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000009
+47.0,NIK-000044,Perempuan,66.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000010
+48.0,NIK-000045,Perempuan,29.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000010
+49.0,NIK-000046,Laki-laki,59.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000010
+50.0,NIK-000047,Laki-laki,23.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000011
+51.0,NIK-000048,Laki-laki,54.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000011
+52.0,NIK-000049,Laki-laki,17.0,15–59 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000011
+53.0,NIK-000050,Laki-laki,48.0,15–59 tahun,S1,Petani,Dusun V,KK-000012
+54.0,NIK-000051,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000012
+55.0,NIK-000052,Perempuan,42.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000012
+56.0,NIK-000053,Perempuan,73.0,60+ tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000013
+57.0,NIK-000054,Laki-laki,36.0,15–59 tahun,SD,Guru,Dusun IV,KK-000013
+58.0,NIK-000055,Laki-laki,67.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000013
+59.0,NIK-000056,Laki-laki,30.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000014
+60.0,NIK-000057,Laki-laki,61.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000014
+61.0,NIK-000058,Perempuan,23.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000014
+62.0,NIK-000059,Perempuan,55.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000015
+63.0,NIK-000060,Perempuan,18.0,15–59 tahun,S1,Guru,Dusun V,KK-000015
+64.0,NIK-000061,Laki-laki,49.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000015
+65.0,NIK-000062,Laki-laki,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000016
+66.0,NIK-000063,Laki-laki,42.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000016
+67.0,NIK-000064,Laki-laki,74.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000016
+68.0,NIK-000065,Perempuan,37.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000017
+69.0,NIK-000066,Perempuan,68.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000017
+70.0,NIK-000067,Perempuan,31.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000017
+71.0,NIK-000068,Laki-laki,62.0,60+ tahun,Diploma,Petani,Dusun III,KK-000018
+72.0,NIK-000069,Laki-laki,25.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000018
+73.0,NIK-000070,Laki-laki,55.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000018
+74.0,NIK-000071,Laki-laki,19.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000019
+75.0,NIK-000072,Perempuan,50.0,15–59 tahun,SMP,Guru,Dusun II,KK-000019
+76.0,NIK-000073,Perempuan,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000019
+77.0,NIK-000074,Perempuan,44.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000020
+78.0,NIK-000075,Laki-laki,6.0,0–14 tahun,Tidak/Belum Sekolah,Pelajar/Mahasiswa,Dusun V,KK-000020
+79.0,NIK-000076,Laki-laki,38.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000020
+80.0,NIK-000077,Laki-laki,69.0,60+ tahun,SMP,Buruh,Dusun II,KK-000021
+81.0,NIK-000078,Laki-laki,32.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000021
+82.0,NIK-000079,Perempuan,63.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000021
+83.0,NIK-000080,Perempuan,26.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000022
+84.0,NIK-000081,Perempuan,57.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000022
+85.0,NIK-000082,Laki-laki,19.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000022
+86.0,NIK-000083,Laki-laki,51.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000023
+87.0,NIK-000084,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000023
+88.0,NIK-000085,Laki-laki,45.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000023
+89.0,NIK-000086,Perempuan,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000024
+90.0,NIK-000087,Perempuan,38.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000024
+91.0,NIK-000088,Perempuan,70.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000024
+92.0,NIK-000089,Laki-laki,33.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000025
+93.0,NIK-000090,Laki-laki,64.0,60+ tahun,S1,Guru,Dusun V,KK-000025
+94.0,NIK-000091,Laki-laki,27.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000025
+95.0,NIK-000092,Laki-laki,58.0,15–59 tahun,SMP,Petani,Dusun II,KK-000026
+96.0,NIK-000093,Laki-laki,21.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000026
+97.0,NIK-000094,Perempuan,51.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000026
+98.0,NIK-000095,Perempuan,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000027
+99.0,NIK-000096,Laki-laki,46.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000027
+100.0,NIK-000097,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000027
+101.0,NIK-000098,Laki-laki,40.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000028
+102.0,NIK-000099,Laki-laki,70.0,60+ tahun,SD,Pedagang,Dusun IV,KK-000028
+103.0,NIK-000100,Laki-laki,34.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000028
+104.0,NIK-000101,Perempuan,65.0,60+ tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000029
+105.0,NIK-000102,Perempuan,28.0,15–59 tahun,SMP,Guru,Dusun II,KK-000029
+106.0,NIK-000103,Perempuan,59.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000029
+107.0,NIK-000104,Laki-laki,22.0,15–59 tahun,SD,Petani,Dusun IV,KK-000030
+108.0,NIK-000105,Laki-laki,53.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000030
+109.0,NIK-000106,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000030
+110.0,NIK-000107,Laki-laki,47.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000031
+111.0,NIK-000108,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000031
+112.0,NIK-000109,Perempuan,41.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000031
+113.0,NIK-000110,Perempuan,72.0,60+ tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000032
+114.0,NIK-000111,Laki-laki,34.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000032
+115.0,NIK-000112,Laki-laki,66.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000032
+116.0,NIK-000113,Laki-laki,29.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000033
+117.0,NIK-000114,Laki-laki,60.0,60+ tahun,SD,Guru,Dusun IV,KK-000033
+118.0,NIK-000115,Perempuan,23.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000033
+119.0,NIK-000116,Perempuan,54.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000034
+120.0,NIK-000117,Perempuan,17.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000034
+121.0,NIK-000118,Laki-laki,47.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000034
+122.0,NIK-000119,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000035
+123.0,NIK-000120,Laki-laki,42.0,15–59 tahun,S1,Guru,Dusun V,KK-000035
+124.0,NIK-000121,Laki-laki,73.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000035
+125.0,NIK-000122,Perempuan,36.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000036
+126.0,NIK-000123,Perempuan,66.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000036
+127.0,NIK-000124,Perempuan,30.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000036
+128.0,NIK-000125,Laki-laki,61.0,60+ tahun,S1,Buruh,Dusun V,KK-000037
+129.0,NIK-000126,Laki-laki,24.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000037
+130.0,NIK-000127,Laki-laki,55.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000037
+131.0,NIK-000128,Laki-laki,18.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000038
+132.0,NIK-000129,Perempuan,49.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000038
+133.0,NIK-000130,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000038
+134.0,NIK-000131,Perempuan,43.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000039
+135.0,NIK-000132,Laki-laki,74.0,60+ tahun,SMP,Guru,Dusun II,KK-000039
+136.0,NIK-000133,Laki-laki,37.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000039
+137.0,NIK-000134,Laki-laki,68.0,60+ tahun,SD,Petani,Dusun IV,KK-000040
+138.0,NIK-000135,Laki-laki,30.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000040
+139.0,NIK-000136,Perempuan,62.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000040
+140.0,NIK-000137,Perempuan,25.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000041
+141.0,NIK-000138,Perempuan,56.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000041
+142.0,NIK-000139,Laki-laki,19.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000041
+143.0,NIK-000140,Laki-laki,50.0,15–59 tahun,S1,Petani,Dusun V,KK-000042
+144.0,NIK-000141,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000042
+145.0,NIK-000142,Laki-laki,43.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000042
+146.0,NIK-000143,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000043
+147.0,NIK-000144,Perempuan,38.0,15–59 tahun,SD,Guru,Dusun IV,KK-000043
+148.0,NIK-000145,Perempuan,69.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000043
+149.0,NIK-000146,Laki-laki,32.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000044
+150.0,NIK-000147,Laki-laki,62.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000044
+151.0,NIK-000148,Laki-laki,26.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000044
+152.0,NIK-000149,Laki-laki,57.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000045
+153.0,NIK-000150,Laki-laki,20.0,15–59 tahun,S1,Guru,Dusun V,KK-000045
+154.0,NIK-000151,Perempuan,51.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000045
+155.0,NIK-000152,Perempuan,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000046
+156.0,NIK-000153,Perempuan,45.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000046
+157.0,NIK-000154,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000046
+158.0,NIK-000155,Laki-laki,39.0,15–59 tahun,S1,Buruh,Dusun V,KK-000047
+159.0,NIK-000156,Laki-laki,70.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000047
+160.0,NIK-000157,Laki-laki,33.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000047
+161.0,NIK-000158,Perempuan,64.0,60+ tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000048
+162.0,NIK-000159,Perempuan,26.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000048
+163.0,NIK-000160,Perempuan,58.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000048
+164.0,NIK-000161,Laki-laki,21.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000049
+165.0,NIK-000162,Laki-laki,52.0,15–59 tahun,SMP,Guru,Dusun II,KK-000049
+166.0,NIK-000163,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000049
+167.0,NIK-000164,Laki-laki,46.0,15–59 tahun,SD,Petani,Dusun IV,KK-000050
+168.0,NIK-000165,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000050
+169.0,NIK-000166,Perempuan,39.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000050
+170.0,NIK-000167,Perempuan,71.0,60+ tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000051
+171.0,NIK-000168,Laki-laki,34.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000051
+172.0,NIK-000169,Laki-laki,65.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000051
+173.0,NIK-000170,Laki-laki,28.0,15–59 tahun,S1,Petani,Dusun V,KK-000052
+174.0,NIK-000171,Laki-laki,58.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000052
+175.0,NIK-000172,Perempuan,22.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000052
+176.0,NIK-000173,Perempuan,53.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000053
+177.0,NIK-000174,Perempuan,16.0,15–59 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000053
+178.0,NIK-000175,Laki-laki,47.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000053
+179.0,NIK-000176,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000054
+180.0,NIK-000177,Laki-laki,41.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000054
+181.0,NIK-000178,Laki-laki,71.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000054
+182.0,NIK-000179,Perempuan,35.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000055
+183.0,NIK-000180,Perempuan,66.0,60+ tahun,S1,Guru,Dusun V,KK-000055
+184.0,NIK-000181,Perempuan,29.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000055
+185.0,NIK-000182,Laki-laki,60.0,60+ tahun,SMP,Petani,Dusun II,KK-000056
+186.0,NIK-000183,Laki-laki,22.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000056
+187.0,NIK-000184,Laki-laki,54.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000056
+188.0,NIK-000185,Laki-laki,17.0,15–59 tahun,S1,Pelajar/Mahasiswa,Dusun V,KK-000057
+189.0,NIK-000186,Perempuan,48.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000057
+190.0,NIK-000187,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000057
+191.0,NIK-000188,Perempuan,42.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000058
+192.0,NIK-000189,Laki-laki,73.0,60+ tahun,SD,Pedagang,Dusun IV,KK-000058
+193.0,NIK-000190,Laki-laki,35.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000058
+194.0,NIK-000191,Laki-laki,67.0,60+ tahun,SMA/SMK,Buruh,Dusun I,KK-000059
+195.0,NIK-000192,Laki-laki,30.0,15–59 tahun,SMP,Guru,Dusun II,KK-000059
+196.0,NIK-000193,Laki-laki,61.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000059
+197.0,NIK-000194,Perempuan,24.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000060
+198.0,NIK-000195,Perempuan,54.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000060
+199.0,NIK-000196,Laki-laki,18.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000060
+200.0,NIK-000197,Laki-laki,49.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000061
+201.0,NIK-000198,Laki-laki,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000061
+202.0,NIK-000199,Laki-laki,43.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000061
+203.0,NIK-000200,Laki-laki,74.0,60+ tahun,S1,Petani,Dusun V,KK-000062
+204.0,NIK-000201,Perempuan,37.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000062
+205.0,NIK-000202,Perempuan,67.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000062
+206.0,NIK-000203,Perempuan,31.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000063
+207.0,NIK-000204,Laki-laki,62.0,60+ tahun,SD,Guru,Dusun IV,KK-000063
+208.0,NIK-000205,Laki-laki,25.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000063
+209.0,NIK-000206,Laki-laki,56.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000064
+210.0,NIK-000207,Laki-laki,18.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000064
+211.0,NIK-000208,Perempuan,50.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000064
+212.0,NIK-000209,Perempuan,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000065
+213.0,NIK-000210,Perempuan,44.0,15–59 tahun,S1,Guru,Dusun V,KK-000065
+214.0,NIK-000211,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000065
+215.0,NIK-000212,Laki-laki,38.0,15–59 tahun,SMP,Petani,Dusun II,KK-000066
+216.0,NIK-000213,Laki-laki,69.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000066
+217.0,NIK-000214,Laki-laki,31.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000066
+218.0,NIK-000215,Perempuan,63.0,60+ tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000067
+219.0,NIK-000216,Perempuan,26.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000067
+220.0,NIK-000217,Perempuan,57.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000067
+221.0,NIK-000218,Laki-laki,20.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000068
+222.0,NIK-000219,Laki-laki,50.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000068
+223.0,NIK-000220,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000068
+224.0,NIK-000221,Laki-laki,45.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000069
+225.0,NIK-000222,Perempuan,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000069
+226.0,NIK-000223,Perempuan,39.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000069
+227.0,NIK-000224,Perempuan,70.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000070
+228.0,NIK-000225,Laki-laki,33.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000070
+229.0,NIK-000226,Laki-laki,63.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000070
+230.0,NIK-000227,Laki-laki,27.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000071
+231.0,NIK-000228,Laki-laki,58.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000071
+232.0,NIK-000229,Perempuan,21.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000071
+233.0,NIK-000230,Perempuan,52.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000072
+234.0,NIK-000231,Perempuan,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000072
+235.0,NIK-000232,Laki-laki,46.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000072
+236.0,NIK-000233,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000073
+237.0,NIK-000234,Laki-laki,40.0,15–59 tahun,SD,Guru,Dusun IV,KK-000073
+238.0,NIK-000235,Laki-laki,71.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000073
+239.0,NIK-000236,Perempuan,34.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000074
+240.0,NIK-000237,Perempuan,65.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000074
+241.0,NIK-000238,Perempuan,27.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000074
+242.0,NIK-000239,Laki-laki,59.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000075
+243.0,NIK-000240,Laki-laki,22.0,15–59 tahun,S1,Guru,Dusun V,KK-000075
+244.0,NIK-000241,Laki-laki,53.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000075
+245.0,NIK-000242,Laki-laki,16.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000076
+246.0,NIK-000243,Laki-laki,46.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000076
+247.0,NIK-000244,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000076
+248.0,NIK-000245,Perempuan,41.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000077
+249.0,NIK-000246,Laki-laki,72.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000077
+250.0,NIK-000247,Laki-laki,35.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000077
+251.0,NIK-000248,Laki-laki,66.0,60+ tahun,Diploma,Petani,Dusun III,KK-000078
+252.0,NIK-000249,Laki-laki,29.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000078
+253.0,NIK-000250,Laki-laki,59.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000078
+254.0,NIK-000251,Perempuan,23.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000079
+255.0,NIK-000252,Perempuan,54.0,15–59 tahun,SMP,Guru,Dusun II,KK-000079
+256.0,NIK-000253,Perempuan,17.0,15–59 tahun,Diploma,Pelajar/Mahasiswa,Dusun III,KK-000079
+257.0,NIK-000254,Laki-laki,48.0,15–59 tahun,SD,Petani,Dusun IV,KK-000080
+258.0,NIK-000255,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000080
+259.0,NIK-000256,Laki-laki,42.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000080
+260.0,NIK-000257,Laki-laki,73.0,60+ tahun,SMP,Buruh,Dusun II,KK-000081
+261.0,NIK-000258,Perempuan,36.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000081
+262.0,NIK-000259,Perempuan,67.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000081
+263.0,NIK-000260,Perempuan,30.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000082
+264.0,NIK-000261,Laki-laki,61.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000082
+265.0,NIK-000262,Laki-laki,23.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000082
+266.0,NIK-000263,Laki-laki,55.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000083
+267.0,NIK-000264,Laki-laki,18.0,15–59 tahun,SD,Guru,Dusun IV,KK-000083
+268.0,NIK-000265,Perempuan,49.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000083
+269.0,NIK-000266,Perempuan,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000084
+270.0,NIK-000267,Perempuan,42.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000084
+271.0,NIK-000268,Laki-laki,74.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000084
+272.0,NIK-000269,Laki-laki,37.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000085
+273.0,NIK-000270,Laki-laki,68.0,60+ tahun,S1,Guru,Dusun V,KK-000085
+274.0,NIK-000271,Laki-laki,31.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000085
+275.0,NIK-000272,Perempuan,62.0,60+ tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000086
+276.0,NIK-000273,Perempuan,25.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000086
+277.0,NIK-000274,Perempuan,55.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000086
+278.0,NIK-000275,Laki-laki,19.0,15–59 tahun,S1,Buruh,Dusun V,KK-000087
+279.0,NIK-000276,Laki-laki,50.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000087
+280.0,NIK-000277,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000087
+281.0,NIK-000278,Laki-laki,44.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000088
+282.0,NIK-000279,Perempuan,6.0,0–14 tahun,Tidak/Belum Sekolah,Pelajar/Mahasiswa,Dusun IV,KK-000088
+283.0,NIK-000280,Perempuan,38.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000088
+284.0,NIK-000281,Perempuan,69.0,60+ tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000089
+285.0,NIK-000282,Laki-laki,32.0,15–59 tahun,SMP,Guru,Dusun II,KK-000089
+286.0,NIK-000283,Laki-laki,63.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000089
+287.0,NIK-000284,Laki-laki,26.0,15–59 tahun,SD,Petani,Dusun IV,KK-000090
+288.0,NIK-000285,Laki-laki,57.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000090
+289.0,NIK-000286,Perempuan,19.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000090
+290.0,NIK-000287,Perempuan,51.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000091
+291.0,NIK-000288,Perempuan,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000091
+292.0,NIK-000289,Laki-laki,45.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000091
+293.0,NIK-000290,Laki-laki,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000092
+294.0,NIK-000291,Laki-laki,38.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000092
+295.0,NIK-000292,Laki-laki,70.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000092
+296.0,NIK-000293,Laki-laki,33.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000093
+297.0,NIK-000294,Perempuan,64.0,60+ tahun,SD,Guru,Dusun IV,KK-000093
+298.0,NIK-000295,Perempuan,27.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000093
+299.0,NIK-000296,Laki-laki,58.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000094
+300.0,NIK-000297,Laki-laki,21.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000094
+301.0,NIK-000298,Laki-laki,51.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000094
+302.0,NIK-000299,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000095
+303.0,NIK-000300,Laki-laki,46.0,15–59 tahun,S1,Guru,Dusun V,KK-000095
+304.0,NIK-000301,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000095
+305.0,NIK-000302,Perempuan,40.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000096
+306.0,NIK-000303,Perempuan,70.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000096
+307.0,NIK-000304,Laki-laki,34.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000096
+308.0,NIK-000305,Laki-laki,65.0,60+ tahun,S1,Buruh,Dusun V,KK-000097
+309.0,NIK-000306,Laki-laki,28.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000097
+310.0,NIK-000307,Laki-laki,59.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000097
+311.0,NIK-000308,Perempuan,22.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000098
+312.0,NIK-000309,Perempuan,53.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000098
+313.0,NIK-000310,Perempuan,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000098
+314.0,NIK-000311,Laki-laki,47.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000099
+315.0,NIK-000312,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000099
+316.0,NIK-000313,Laki-laki,41.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000099
+317.0,NIK-000314,Laki-laki,72.0,60+ tahun,SD,Petani,Dusun IV,KK-000100
+318.0,NIK-000315,Perempuan,34.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000100
+319.0,NIK-000316,Perempuan,66.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000100
+320.0,NIK-000317,Perempuan,29.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000101
+321.0,NIK-000318,Laki-laki,60.0,60+ tahun,Diploma,Guru,Dusun III,KK-000101
+322.0,NIK-000319,Laki-laki,23.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000101
+323.0,NIK-000320,Laki-laki,54.0,15–59 tahun,S1,Petani,Dusun V,KK-000102
+324.0,NIK-000321,Laki-laki,17.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun I,KK-000102
+325.0,NIK-000322,Perempuan,47.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000102
+326.0,NIK-000323,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000103
+327.0,NIK-000324,Perempuan,42.0,15–59 tahun,SD,Guru,Dusun IV,KK-000103
+328.0,NIK-000325,Laki-laki,73.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000103
+329.0,NIK-000326,Laki-laki,36.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000104
+330.0,NIK-000327,Laki-laki,66.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000104
+331.0,NIK-000328,Laki-laki,30.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000104
+332.0,NIK-000329,Perempuan,61.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000105
+333.0,NIK-000330,Perempuan,24.0,15–59 tahun,S1,Guru,Dusun V,KK-000105
+334.0,NIK-000331,Perempuan,55.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000105
+335.0,NIK-000332,Laki-laki,18.0,15–59 tahun,SMP,Petani,Dusun II,KK-000106
+336.0,NIK-000333,Laki-laki,49.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000106
+337.0,NIK-000334,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000106
+338.0,NIK-000335,Laki-laki,43.0,15–59 tahun,S1,Buruh,Dusun V,KK-000107
+339.0,NIK-000336,Perempuan,74.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000107
+340.0,NIK-000337,Perempuan,37.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000107
+341.0,NIK-000338,Perempuan,68.0,60+ tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000108
+342.0,NIK-000339,Laki-laki,30.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000108
+343.0,NIK-000340,Laki-laki,62.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000108
+344.0,NIK-000341,Laki-laki,25.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000109
+345.0,NIK-000342,Laki-laki,56.0,15–59 tahun,SMP,Guru,Dusun II,KK-000109
+346.0,NIK-000343,Laki-laki,19.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000109
+347.0,NIK-000344,Perempuan,50.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000110
+348.0,NIK-000345,Perempuan,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000110
+349.0,NIK-000346,Laki-laki,43.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000110
+350.0,NIK-000347,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000111
+351.0,NIK-000348,Laki-laki,38.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000111
+352.0,NIK-000349,Laki-laki,69.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000111
+353.0,NIK-000350,Laki-laki,32.0,15–59 tahun,S1,Petani,Dusun V,KK-000112
+354.0,NIK-000351,Perempuan,62.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000112
+355.0,NIK-000352,Perempuan,26.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000112
+356.0,NIK-000353,Perempuan,57.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000113
+357.0,NIK-000354,Laki-laki,20.0,15–59 tahun,SD,Guru,Dusun IV,KK-000113
+358.0,NIK-000355,Laki-laki,51.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000113
+359.0,NIK-000356,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000114
+360.0,NIK-000357,Laki-laki,45.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000114
+361.0,NIK-000358,Perempuan,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000114
+362.0,NIK-000359,Perempuan,39.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000115
+363.0,NIK-000360,Perempuan,70.0,60+ tahun,S1,Guru,Dusun V,KK-000115
+364.0,NIK-000361,Laki-laki,33.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000115
+365.0,NIK-000362,Laki-laki,64.0,60+ tahun,SMP,Petani,Dusun II,KK-000116
+366.0,NIK-000363,Laki-laki,26.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000116
+367.0,NIK-000364,Laki-laki,58.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000116
+368.0,NIK-000365,Perempuan,21.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000117
+369.0,NIK-000366,Perempuan,52.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000117
+370.0,NIK-000367,Perempuan,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000117
+371.0,NIK-000368,Laki-laki,46.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000118
+372.0,NIK-000369,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000118
+373.0,NIK-000370,Laki-laki,39.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000118
+374.0,NIK-000371,Laki-laki,71.0,60+ tahun,SMA/SMK,Buruh,Dusun I,KK-000119
+375.0,NIK-000372,Perempuan,34.0,15–59 tahun,SMP,Guru,Dusun II,KK-000119
+376.0,NIK-000373,Perempuan,65.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000119
+377.0,NIK-000374,Perempuan,28.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000120
+378.0,NIK-000375,Laki-laki,58.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000120
+379.0,NIK-000376,Laki-laki,22.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000120
+380.0,NIK-000377,Laki-laki,53.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000121
+381.0,NIK-000378,Laki-laki,16.0,15–59 tahun,Diploma,Pelajar/Mahasiswa,Dusun III,KK-000121
+382.0,NIK-000379,Perempuan,47.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000121
+383.0,NIK-000380,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000122
+384.0,NIK-000381,Perempuan,41.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000122
+385.0,NIK-000382,Laki-laki,71.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000122
+386.0,NIK-000383,Laki-laki,35.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000123
+387.0,NIK-000384,Laki-laki,66.0,60+ tahun,SD,Guru,Dusun IV,KK-000123
+388.0,NIK-000385,Laki-laki,29.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000123
+389.0,NIK-000386,Perempuan,60.0,60+ tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000124
+390.0,NIK-000387,Perempuan,22.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000124
+391.0,NIK-000388,Perempuan,54.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000124
+392.0,NIK-000389,Laki-laki,17.0,15–59 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000125
+393.0,NIK-000390,Laki-laki,48.0,15–59 tahun,S1,Guru,Dusun V,KK-000125
+394.0,NIK-000391,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000125
+395.0,NIK-000392,Laki-laki,42.0,15–59 tahun,SMP,Petani,Dusun II,KK-000126
+396.0,NIK-000393,Laki-laki,73.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000126
+397.0,NIK-000394,Perempuan,35.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000126
+398.0,NIK-000395,Perempuan,67.0,60+ tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000127
+399.0,NIK-000396,Laki-laki,30.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000127
+400.0,NIK-000397,Laki-laki,61.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000127
+401.0,NIK-000398,Laki-laki,24.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000128
+402.0,NIK-000399,Laki-laki,54.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000128
+403.0,NIK-000400,Laki-laki,18.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000128
+404.0,NIK-000401,Perempuan,49.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000129
+405.0,NIK-000402,Perempuan,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000129
+406.0,NIK-000403,Perempuan,43.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000129
+407.0,NIK-000404,Laki-laki,74.0,60+ tahun,SD,Petani,Dusun IV,KK-000130
+408.0,NIK-000405,Laki-laki,37.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000130
+409.0,NIK-000406,Laki-laki,67.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000130
+410.0,NIK-000407,Laki-laki,31.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000131
+411.0,NIK-000408,Perempuan,62.0,60+ tahun,Diploma,Guru,Dusun III,KK-000131
+412.0,NIK-000409,Perempuan,25.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000131
+413.0,NIK-000410,Perempuan,56.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000132
+414.0,NIK-000411,Laki-laki,18.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000132
+415.0,NIK-000412,Laki-laki,50.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000132
+416.0,NIK-000413,Laki-laki,13.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000133
+417.0,NIK-000414,Laki-laki,44.0,15–59 tahun,SD,Guru,Dusun IV,KK-000133
+418.0,NIK-000415,Perempuan,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000133
+419.0,NIK-000416,Perempuan,38.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000134
+420.0,NIK-000417,Perempuan,69.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000134
+421.0,NIK-000418,Laki-laki,31.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000134
+422.0,NIK-000419,Laki-laki,63.0,60+ tahun,SD,Buruh,Dusun IV,KK-000135
+423.0,NIK-000420,Laki-laki,26.0,15–59 tahun,S1,Guru,Dusun V,KK-000135
+424.0,NIK-000421,Laki-laki,57.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000135
+425.0,NIK-000422,Perempuan,20.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000136
+426.0,NIK-000423,Perempuan,50.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000136
+427.0,NIK-000424,Perempuan,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000136
+428.0,NIK-000425,Laki-laki,45.0,15–59 tahun,S1,Buruh,Dusun V,KK-000137
+429.0,NIK-000426,Laki-laki,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000137
+430.0,NIK-000427,Laki-laki,39.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000137
+431.0,NIK-000428,Laki-laki,70.0,60+ tahun,Diploma,Petani,Dusun III,KK-000138
+432.0,NIK-000429,Perempuan,33.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000138
+433.0,NIK-000430,Perempuan,63.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000138
+434.0,NIK-000431,Perempuan,27.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000139
+435.0,NIK-000432,Laki-laki,58.0,15–59 tahun,SMP,Guru,Dusun II,KK-000139
+436.0,NIK-000433,Laki-laki,21.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000139
+437.0,NIK-000434,Laki-laki,52.0,15–59 tahun,SD,Petani,Dusun IV,KK-000140
+438.0,NIK-000435,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000140
+439.0,NIK-000436,Perempuan,46.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000140
+440.0,NIK-000437,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000141
+441.0,NIK-000438,Perempuan,40.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000141
+442.0,NIK-000439,Laki-laki,71.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000141
+443.0,NIK-000440,Laki-laki,34.0,15–59 tahun,S1,Petani,Dusun V,KK-000142
+444.0,NIK-000441,Laki-laki,65.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000142
+445.0,NIK-000442,Laki-laki,27.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000142
+446.0,NIK-000443,Laki-laki,59.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000143
+447.0,NIK-000444,Perempuan,22.0,15–59 tahun,SD,Guru,Dusun IV,KK-000143
+448.0,NIK-000445,Perempuan,53.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000143
+449.0,NIK-000446,Laki-laki,16.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun I,KK-000144
+450.0,NIK-000447,Laki-laki,46.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000144
+451.0,NIK-000448,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000144
+452.0,NIK-000449,Laki-laki,41.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000145
+453.0,NIK-000450,Laki-laki,72.0,60+ tahun,S1,Guru,Dusun V,KK-000145
+454.0,NIK-000451,Perempuan,35.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000145
+455.0,NIK-000452,Perempuan,66.0,60+ tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000146
+456.0,NIK-000453,Perempuan,29.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000146
+457.0,NIK-000454,Laki-laki,59.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000146
+458.0,NIK-000455,Laki-laki,23.0,15–59 tahun,S1,Buruh,Dusun V,KK-000147
+459.0,NIK-000456,Laki-laki,54.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000147
+460.0,NIK-000457,Laki-laki,17.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000147
+461.0,NIK-000458,Perempuan,48.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000148
+462.0,NIK-000459,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000148
+463.0,NIK-000460,Perempuan,42.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000148
+464.0,NIK-000461,Laki-laki,73.0,60+ tahun,SMA/SMK,Buruh,Dusun I,KK-000149
+465.0,NIK-000462,Laki-laki,36.0,15–59 tahun,SMP,Guru,Dusun II,KK-000149
+466.0,NIK-000463,Laki-laki,67.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000149
+467.0,NIK-000464,Laki-laki,30.0,15–59 tahun,SD,Petani,Dusun IV,KK-000150
+468.0,NIK-000465,Perempuan,61.0,60+ tahun,S1,Pedagang,Dusun V,KK-000150
+469.0,NIK-000466,Perempuan,23.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000150
+470.0,NIK-000467,Perempuan,55.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000151
+471.0,NIK-000468,Laki-laki,18.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000151
+472.0,NIK-000469,Laki-laki,49.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000151
+473.0,NIK-000470,Laki-laki,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000152
+474.0,NIK-000471,Laki-laki,42.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000152
+475.0,NIK-000472,Perempuan,74.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000152
+476.0,NIK-000473,Perempuan,37.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000153
+477.0,NIK-000474,Perempuan,68.0,60+ tahun,SD,Guru,Dusun IV,KK-000153
+478.0,NIK-000475,Laki-laki,31.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000153
+479.0,NIK-000476,Laki-laki,62.0,60+ tahun,SMA/SMK,Petani,Dusun I,KK-000154
+480.0,NIK-000477,Laki-laki,25.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000154
+481.0,NIK-000478,Laki-laki,55.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000154
+482.0,NIK-000479,Perempuan,19.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000155
+483.0,NIK-000480,Perempuan,50.0,15–59 tahun,S1,Guru,Dusun V,KK-000155
+484.0,NIK-000481,Perempuan,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000155
+485.0,NIK-000482,Laki-laki,44.0,15–59 tahun,SMP,Petani,Dusun II,KK-000156
+486.0,NIK-000483,Laki-laki,6.0,0–14 tahun,Tidak/Belum Sekolah,Pelajar/Mahasiswa,Dusun III,KK-000156
+487.0,NIK-000484,Laki-laki,38.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000156
+488.0,NIK-000485,Laki-laki,69.0,60+ tahun,S1,Buruh,Dusun V,KK-000157
+489.0,NIK-000486,Perempuan,32.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000157
+490.0,NIK-000487,Perempuan,63.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000157
+491.0,NIK-000488,Perempuan,26.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000158
+492.0,NIK-000489,Laki-laki,57.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000158
+493.0,NIK-000490,Laki-laki,19.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000158
+494.0,NIK-000491,Laki-laki,51.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000159
+495.0,NIK-000492,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000159
+496.0,NIK-000493,Laki-laki,45.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000159
+497.0,NIK-000494,Perempuan,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000160
+498.0,NIK-000495,Perempuan,38.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000160
+499.0,NIK-000496,Laki-laki,70.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000160
+500.0,NIK-000497,Laki-laki,33.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000161
+501.0,NIK-000498,Laki-laki,64.0,60+ tahun,Diploma,Guru,Dusun III,KK-000161
+502.0,NIK-000499,Laki-laki,27.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000161
+503.0,NIK-000500,Laki-laki,58.0,15–59 tahun,S1,Petani,Dusun V,KK-000162
+504.0,NIK-000501,Perempuan,21.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000162
+505.0,NIK-000502,Perempuan,51.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000162
+506.0,NIK-000503,Perempuan,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000163
+507.0,NIK-000504,Laki-laki,46.0,15–59 tahun,SD,Guru,Dusun IV,KK-000163
+508.0,NIK-000505,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000163
+509.0,NIK-000506,Laki-laki,40.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000164
+510.0,NIK-000507,Laki-laki,70.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000164
+511.0,NIK-000508,Perempuan,34.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000164
+512.0,NIK-000509,Perempuan,65.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000165
+513.0,NIK-000510,Perempuan,28.0,15–59 tahun,S1,Guru,Dusun V,KK-000165
+514.0,NIK-000511,Laki-laki,59.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000165
+515.0,NIK-000512,Laki-laki,22.0,15–59 tahun,SMP,Petani,Dusun II,KK-000166
+516.0,NIK-000513,Laki-laki,53.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000166
+517.0,NIK-000514,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000166
+518.0,NIK-000515,Perempuan,47.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000167
+519.0,NIK-000516,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000167
+520.0,NIK-000517,Perempuan,41.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000167
+521.0,NIK-000518,Laki-laki,72.0,60+ tahun,Diploma,Petani,Dusun III,KK-000168
+522.0,NIK-000519,Laki-laki,34.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000168
+523.0,NIK-000520,Laki-laki,66.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000168
+524.0,NIK-000521,Laki-laki,29.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000169
+525.0,NIK-000522,Perempuan,60.0,60+ tahun,SMP,Guru,Dusun II,KK-000169
+526.0,NIK-000523,Perempuan,23.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000169
+527.0,NIK-000524,Perempuan,54.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000170
+528.0,NIK-000525,Laki-laki,17.0,15–59 tahun,S1,Pelajar/Mahasiswa,Dusun V,KK-000170
+529.0,NIK-000526,Laki-laki,47.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000170
+530.0,NIK-000527,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000171
+531.0,NIK-000528,Laki-laki,42.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000171
+532.0,NIK-000529,Perempuan,73.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000171
+533.0,NIK-000530,Perempuan,36.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000172
+534.0,NIK-000531,Perempuan,66.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000172
+535.0,NIK-000532,Laki-laki,30.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000172
+536.0,NIK-000533,Laki-laki,61.0,60+ tahun,Diploma,Buruh,Dusun III,KK-000173
+537.0,NIK-000534,Laki-laki,24.0,15–59 tahun,SD,Guru,Dusun IV,KK-000173
+538.0,NIK-000535,Laki-laki,55.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000173
+539.0,NIK-000536,Perempuan,18.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000174
+540.0,NIK-000537,Perempuan,49.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000174
+541.0,NIK-000538,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000174
+542.0,NIK-000539,Laki-laki,43.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000175
+543.0,NIK-000540,Laki-laki,74.0,60+ tahun,S1,Guru,Dusun V,KK-000175
+544.0,NIK-000541,Laki-laki,37.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000175
+545.0,NIK-000542,Laki-laki,68.0,60+ tahun,SMP,Petani,Dusun II,KK-000176
+546.0,NIK-000543,Laki-laki,30.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000176
+547.0,NIK-000544,Perempuan,62.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000176
+548.0,NIK-000545,Perempuan,25.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000177
+549.0,NIK-000546,Laki-laki,56.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000177
+550.0,NIK-000547,Laki-laki,19.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000177
+551.0,NIK-000548,Laki-laki,50.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000178
+552.0,NIK-000549,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000178
+553.0,NIK-000550,Laki-laki,43.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000178
+554.0,NIK-000551,Perempuan,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000179
+555.0,NIK-000552,Perempuan,38.0,15–59 tahun,SMP,Guru,Dusun II,KK-000179
+556.0,NIK-000553,Perempuan,69.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000179
+557.0,NIK-000554,Laki-laki,32.0,15–59 tahun,SD,Petani,Dusun IV,KK-000180
+558.0,NIK-000555,Laki-laki,62.0,60+ tahun,S1,Pedagang,Dusun V,KK-000180
+559.0,NIK-000556,Laki-laki,26.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000180
+560.0,NIK-000557,Laki-laki,57.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000181
+561.0,NIK-000558,Perempuan,20.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000181
+562.0,NIK-000559,Perempuan,51.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000181
+563.0,NIK-000560,Perempuan,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000182
+564.0,NIK-000561,Laki-laki,45.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000182
+565.0,NIK-000562,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000182
+566.0,NIK-000563,Laki-laki,39.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000183
+567.0,NIK-000564,Laki-laki,70.0,60+ tahun,SD,Guru,Dusun IV,KK-000183
+568.0,NIK-000565,Perempuan,33.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000183
+569.0,NIK-000566,Perempuan,64.0,60+ tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000184
+570.0,NIK-000567,Perempuan,26.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000184
+571.0,NIK-000568,Laki-laki,58.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000184
+572.0,NIK-000569,Laki-laki,21.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000185
+573.0,NIK-000570,Laki-laki,52.0,15–59 tahun,S1,Guru,Dusun V,KK-000185
+574.0,NIK-000571,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000185
+575.0,NIK-000572,Perempuan,46.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000186
+576.0,NIK-000573,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000186
+577.0,NIK-000574,Perempuan,39.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000186
+578.0,NIK-000575,Laki-laki,71.0,60+ tahun,S1,Buruh,Dusun V,KK-000187
+579.0,NIK-000576,Laki-laki,34.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000187
+580.0,NIK-000577,Laki-laki,65.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000187
+581.0,NIK-000578,Laki-laki,28.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000188
+582.0,NIK-000579,Perempuan,58.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000188
+583.0,NIK-000580,Perempuan,22.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000188
+584.0,NIK-000581,Perempuan,53.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000189
+585.0,NIK-000582,Laki-laki,16.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000189
+586.0,NIK-000583,Laki-laki,47.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000189
+587.0,NIK-000584,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000190
+588.0,NIK-000585,Laki-laki,41.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000190
+589.0,NIK-000586,Perempuan,71.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000190
+590.0,NIK-000587,Perempuan,35.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000191
+591.0,NIK-000588,Perempuan,66.0,60+ tahun,Diploma,Guru,Dusun III,KK-000191
+592.0,NIK-000589,Laki-laki,29.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000191
+593.0,NIK-000590,Laki-laki,60.0,60+ tahun,S1,Petani,Dusun V,KK-000192
+594.0,NIK-000591,Laki-laki,22.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000192
+595.0,NIK-000592,Laki-laki,54.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000192
+596.0,NIK-000593,Laki-laki,17.0,15–59 tahun,Diploma,Pelajar/Mahasiswa,Dusun III,KK-000193
+597.0,NIK-000594,Perempuan,48.0,15–59 tahun,SD,Guru,Dusun IV,KK-000193
+598.0,NIK-000595,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000193
+599.0,NIK-000596,Laki-laki,42.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000194
+600.0,NIK-000597,Laki-laki,73.0,60+ tahun,SMP,Pedagang,Dusun II,KK-000194
+601.0,NIK-000598,Laki-laki,35.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000194
+602.0,NIK-000599,Laki-laki,67.0,60+ tahun,SD,Buruh,Dusun IV,KK-000195
+603.0,NIK-000600,Laki-laki,30.0,15–59 tahun,S1,Guru,Dusun V,KK-000195
+604.0,NIK-000601,Perempuan,61.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000195
+605.0,NIK-000602,Perempuan,24.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000196
+606.0,NIK-000603,Perempuan,54.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000196
+607.0,NIK-000604,Laki-laki,18.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000196
+608.0,NIK-000605,Laki-laki,49.0,15–59 tahun,S1,Buruh,Dusun V,KK-000197
+609.0,NIK-000606,Laki-laki,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000197
+610.0,NIK-000607,Laki-laki,43.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000197
+611.0,NIK-000608,Perempuan,74.0,60+ tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000198
+612.0,NIK-000609,Perempuan,37.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000198
+613.0,NIK-000610,Perempuan,67.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000198
+614.0,NIK-000611,Laki-laki,31.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000199
+615.0,NIK-000612,Laki-laki,62.0,60+ tahun,SMP,Guru,Dusun II,KK-000199
+616.0,NIK-000613,Laki-laki,25.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000199
+617.0,NIK-000614,Laki-laki,56.0,15–59 tahun,SD,Petani,Dusun IV,KK-000200
+618.0,NIK-000615,Perempuan,18.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000200
+619.0,NIK-000616,Perempuan,50.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000200
+620.0,NIK-000617,Perempuan,13.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000201
+621.0,NIK-000618,Laki-laki,44.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000201
+622.0,NIK-000619,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000201
+623.0,NIK-000620,Laki-laki,38.0,15–59 tahun,S1,Petani,Dusun V,KK-000202
+624.0,NIK-000621,Laki-laki,69.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000202
+625.0,NIK-000622,Perempuan,31.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000202
+626.0,NIK-000623,Perempuan,63.0,60+ tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000203
+627.0,NIK-000624,Perempuan,26.0,15–59 tahun,SD,Guru,Dusun IV,KK-000203
+628.0,NIK-000625,Laki-laki,57.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000203
+629.0,NIK-000626,Laki-laki,20.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000204
+630.0,NIK-000627,Laki-laki,50.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000204
+631.0,NIK-000628,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000204
+632.0,NIK-000629,Perempuan,45.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000205
+633.0,NIK-000630,Perempuan,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000205
+634.0,NIK-000631,Perempuan,39.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000205
+635.0,NIK-000632,Laki-laki,70.0,60+ tahun,SMP,Petani,Dusun II,KK-000206
+636.0,NIK-000633,Laki-laki,33.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000206
+637.0,NIK-000634,Laki-laki,63.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000206
+638.0,NIK-000635,Laki-laki,27.0,15–59 tahun,S1,Buruh,Dusun V,KK-000207
+639.0,NIK-000636,Perempuan,58.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000207
+640.0,NIK-000637,Perempuan,21.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000207
+641.0,NIK-000638,Perempuan,52.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000208
+642.0,NIK-000639,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000208
+643.0,NIK-000640,Laki-laki,46.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000208
+644.0,NIK-000641,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000209
+645.0,NIK-000642,Laki-laki,40.0,15–59 tahun,SMP,Guru,Dusun II,KK-000209
+646.0,NIK-000643,Laki-laki,71.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000209
+647.0,NIK-000644,Perempuan,34.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000210
+648.0,NIK-000645,Perempuan,65.0,60+ tahun,S1,Pedagang,Dusun V,KK-000210
+649.0,NIK-000646,Laki-laki,27.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000210
+650.0,NIK-000647,Laki-laki,59.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000211
+651.0,NIK-000648,Laki-laki,22.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000211
+652.0,NIK-000649,Laki-laki,53.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000211
+653.0,NIK-000650,Laki-laki,16.0,15–59 tahun,S1,Pelajar/Mahasiswa,Dusun V,KK-000212
+654.0,NIK-000651,Perempuan,46.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000212
+655.0,NIK-000652,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000212
+656.0,NIK-000653,Perempuan,41.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000213
+657.0,NIK-000654,Laki-laki,72.0,60+ tahun,SD,Guru,Dusun IV,KK-000213
+658.0,NIK-000655,Laki-laki,35.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000213
+659.0,NIK-000656,Laki-laki,66.0,60+ tahun,SMA/SMK,Petani,Dusun I,KK-000214
+660.0,NIK-000657,Laki-laki,29.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000214
+661.0,NIK-000658,Perempuan,59.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000214
+662.0,NIK-000659,Perempuan,23.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000215
+663.0,NIK-000660,Perempuan,54.0,15–59 tahun,S1,Guru,Dusun V,KK-000215
+664.0,NIK-000661,Laki-laki,17.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun I,KK-000215
+665.0,NIK-000662,Laki-laki,48.0,15–59 tahun,SMP,Petani,Dusun II,KK-000216
+666.0,NIK-000663,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000216
+667.0,NIK-000664,Laki-laki,42.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000216
+668.0,NIK-000665,Perempuan,73.0,60+ tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000217
+669.0,NIK-000666,Perempuan,36.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000217
+670.0,NIK-000667,Perempuan,67.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000217
+671.0,NIK-000668,Laki-laki,30.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000218
+672.0,NIK-000669,Laki-laki,61.0,60+ tahun,SD,Pedagang,Dusun IV,KK-000218
+673.0,NIK-000670,Laki-laki,23.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000218
+674.0,NIK-000671,Laki-laki,55.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000219
+675.0,NIK-000672,Perempuan,18.0,15–59 tahun,SMP,Guru,Dusun II,KK-000219
+676.0,NIK-000673,Perempuan,49.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000219
+677.0,NIK-000674,Perempuan,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000220
+678.0,NIK-000675,Laki-laki,42.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000220
+679.0,NIK-000676,Laki-laki,74.0,60+ tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000220
+680.0,NIK-000677,Laki-laki,37.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000221
+681.0,NIK-000678,Laki-laki,68.0,60+ tahun,Diploma,Guru,Dusun III,KK-000221
+682.0,NIK-000679,Perempuan,31.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000221
+683.0,NIK-000680,Perempuan,62.0,60+ tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000222
+684.0,NIK-000681,Perempuan,25.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000222
+685.0,NIK-000682,Laki-laki,55.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000222
+686.0,NIK-000683,Laki-laki,19.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000223
+687.0,NIK-000684,Laki-laki,50.0,15–59 tahun,SD,Guru,Dusun IV,KK-000223
+688.0,NIK-000685,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000223
+689.0,NIK-000686,Perempuan,44.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000224
+690.0,NIK-000687,Perempuan,6.0,0–14 tahun,Tidak/Belum Sekolah,Pelajar/Mahasiswa,Dusun II,KK-000224
+691.0,NIK-000688,Perempuan,38.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000224
+692.0,NIK-000689,Laki-laki,69.0,60+ tahun,SD,Buruh,Dusun IV,KK-000225
+693.0,NIK-000690,Laki-laki,32.0,15–59 tahun,S1,Guru,Dusun V,KK-000225
+694.0,NIK-000691,Laki-laki,63.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000225
+695.0,NIK-000692,Laki-laki,26.0,15–59 tahun,SMP,Petani,Dusun II,KK-000226
+696.0,NIK-000693,Laki-laki,57.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000226
+697.0,NIK-000694,Perempuan,19.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000226
+698.0,NIK-000695,Perempuan,51.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000227
+699.0,NIK-000696,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000227
+700.0,NIK-000697,Laki-laki,45.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000227
+701.0,NIK-000698,Laki-laki,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000228
+702.0,NIK-000699,Laki-laki,38.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000228
+703.0,NIK-000700,Laki-laki,70.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000228
+704.0,NIK-000701,Perempuan,33.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000229
+705.0,NIK-000702,Perempuan,64.0,60+ tahun,SMP,Guru,Dusun II,KK-000229
+706.0,NIK-000703,Perempuan,27.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000229
+707.0,NIK-000704,Laki-laki,58.0,15–59 tahun,SD,Petani,Dusun IV,KK-000230
+708.0,NIK-000705,Laki-laki,21.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000230
+709.0,NIK-000706,Laki-laki,51.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000230
+710.0,NIK-000707,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000231
+711.0,NIK-000708,Perempuan,46.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000231
+712.0,NIK-000709,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000231
+713.0,NIK-000710,Perempuan,40.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000232
+714.0,NIK-000711,Laki-laki,70.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000232
+715.0,NIK-000712,Laki-laki,34.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000232
+716.0,NIK-000713,Laki-laki,65.0,60+ tahun,Diploma,Buruh,Dusun III,KK-000233
+717.0,NIK-000714,Laki-laki,28.0,15–59 tahun,SD,Guru,Dusun IV,KK-000233
+718.0,NIK-000715,Perempuan,59.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000233
+719.0,NIK-000716,Perempuan,22.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000234
+720.0,NIK-000717,Perempuan,53.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000234
+721.0,NIK-000718,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000234
+722.0,NIK-000719,Laki-laki,47.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000235
+723.0,NIK-000720,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000235
+724.0,NIK-000721,Laki-laki,41.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000235
+725.0,NIK-000722,Perempuan,72.0,60+ tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000236
+726.0,NIK-000723,Perempuan,34.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000236
+727.0,NIK-000724,Perempuan,66.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000236
+728.0,NIK-000725,Laki-laki,29.0,15–59 tahun,S1,Buruh,Dusun V,KK-000237
+729.0,NIK-000726,Laki-laki,60.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000237
+730.0,NIK-000727,Laki-laki,23.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000237
+731.0,NIK-000728,Laki-laki,54.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000238
+732.0,NIK-000729,Perempuan,17.0,15–59 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000238
+733.0,NIK-000730,Perempuan,47.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000238
+734.0,NIK-000731,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000239
+735.0,NIK-000732,Laki-laki,42.0,15–59 tahun,SMP,Guru,Dusun II,KK-000239
+736.0,NIK-000733,Laki-laki,73.0,60+ tahun,Diploma,Perangkat Desa,Dusun III,KK-000239
+737.0,NIK-000734,Laki-laki,36.0,15–59 tahun,SD,Petani,Dusun IV,KK-000240
+738.0,NIK-000735,Laki-laki,66.0,60+ tahun,S1,Pedagang,Dusun V,KK-000240
+739.0,NIK-000736,Perempuan,30.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000240
+740.0,NIK-000737,Perempuan,61.0,60+ tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000241
+741.0,NIK-000738,Perempuan,24.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000241
+742.0,NIK-000739,Laki-laki,55.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000241
+743.0,NIK-000740,Laki-laki,18.0,15–59 tahun,S1,Petani,Dusun V,KK-000242
+744.0,NIK-000741,Laki-laki,49.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000242
+745.0,NIK-000742,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000242
+746.0,NIK-000743,Laki-laki,43.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000243
+747.0,NIK-000744,Perempuan,74.0,60+ tahun,SD,Guru,Dusun IV,KK-000243
+748.0,NIK-000745,Perempuan,37.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000243
+749.0,NIK-000746,Laki-laki,68.0,60+ tahun,SMA/SMK,Petani,Dusun I,KK-000244
+750.0,NIK-000747,Laki-laki,30.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000244
+751.0,NIK-000748,Laki-laki,62.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000244
+752.0,NIK-000749,Laki-laki,25.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000245
+753.0,NIK-000750,Laki-laki,56.0,15–59 tahun,S1,Guru,Dusun V,KK-000245
+754.0,NIK-000751,Perempuan,19.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000245
+755.0,NIK-000752,Perempuan,50.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000246
+756.0,NIK-000753,Perempuan,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000246
+757.0,NIK-000754,Laki-laki,43.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000246
+758.0,NIK-000755,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000247
+759.0,NIK-000756,Laki-laki,38.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000247
+760.0,NIK-000757,Laki-laki,69.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000247
+761.0,NIK-000758,Perempuan,32.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000248
+762.0,NIK-000759,Perempuan,62.0,60+ tahun,SD,Pedagang,Dusun IV,KK-000248
+763.0,NIK-000760,Perempuan,26.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000248
+764.0,NIK-000761,Laki-laki,57.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000249
+765.0,NIK-000762,Laki-laki,20.0,15–59 tahun,SMP,Guru,Dusun II,KK-000249
+766.0,NIK-000763,Laki-laki,51.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000249
+767.0,NIK-000764,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000250
+768.0,NIK-000765,Perempuan,45.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000250
+769.0,NIK-000766,Perempuan,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000250
+770.0,NIK-000767,Perempuan,39.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000251
+771.0,NIK-000768,Laki-laki,70.0,60+ tahun,Diploma,Guru,Dusun III,KK-000251
+772.0,NIK-000769,Laki-laki,33.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000251
+773.0,NIK-000770,Laki-laki,64.0,60+ tahun,S1,Petani,Dusun V,KK-000252
+774.0,NIK-000771,Laki-laki,26.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000252
+775.0,NIK-000772,Perempuan,58.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000252
+776.0,NIK-000773,Perempuan,21.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000253
+777.0,NIK-000774,Perempuan,52.0,15–59 tahun,SD,Guru,Dusun IV,KK-000253
+778.0,NIK-000775,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000253
+779.0,NIK-000776,Laki-laki,46.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000254
+780.0,NIK-000777,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000254
+781.0,NIK-000778,Laki-laki,39.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000254
+782.0,NIK-000779,Perempuan,71.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000255
+783.0,NIK-000780,Perempuan,34.0,15–59 tahun,S1,Guru,Dusun V,KK-000255
+784.0,NIK-000781,Perempuan,65.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000255
+785.0,NIK-000782,Laki-laki,28.0,15–59 tahun,SMP,Petani,Dusun II,KK-000256
+786.0,NIK-000783,Laki-laki,58.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000256
+787.0,NIK-000784,Laki-laki,22.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000256
+788.0,NIK-000785,Laki-laki,53.0,15–59 tahun,S1,Buruh,Dusun V,KK-000257
+789.0,NIK-000786,Perempuan,16.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun I,KK-000257
+790.0,NIK-000787,Perempuan,47.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000257
+791.0,NIK-000788,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000258
+792.0,NIK-000789,Laki-laki,41.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000258
+793.0,NIK-000790,Laki-laki,71.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000258
+794.0,NIK-000791,Laki-laki,35.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000259
+795.0,NIK-000792,Laki-laki,66.0,60+ tahun,SMP,Guru,Dusun II,KK-000259
+796.0,NIK-000793,Laki-laki,29.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000259
+797.0,NIK-000794,Perempuan,60.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000260
+798.0,NIK-000795,Perempuan,22.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000260
+799.0,NIK-000796,Laki-laki,54.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000260
+800.0,NIK-000797,Laki-laki,17.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000261
+801.0,NIK-000798,Laki-laki,48.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000261
+802.0,NIK-000799,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000261
+803.0,NIK-000800,Laki-laki,42.0,15–59 tahun,S1,Petani,Dusun V,KK-000262
+804.0,NIK-000801,Perempuan,73.0,60+ tahun,SMA/SMK,Pedagang,Dusun I,KK-000262
+805.0,NIK-000802,Perempuan,35.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000262
+806.0,NIK-000803,Perempuan,67.0,60+ tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000263
+807.0,NIK-000804,Laki-laki,30.0,15–59 tahun,SD,Guru,Dusun IV,KK-000263
+808.0,NIK-000805,Laki-laki,61.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000263
+809.0,NIK-000806,Laki-laki,24.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000264
+810.0,NIK-000807,Laki-laki,54.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000264
+811.0,NIK-000808,Perempuan,18.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000264
+812.0,NIK-000809,Perempuan,49.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000265
+813.0,NIK-000810,Perempuan,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000265
+814.0,NIK-000811,Laki-laki,43.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000265
+815.0,NIK-000812,Laki-laki,74.0,60+ tahun,SMP,Petani,Dusun II,KK-000266
+816.0,NIK-000813,Laki-laki,37.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000266
+817.0,NIK-000814,Laki-laki,67.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000266
+818.0,NIK-000815,Perempuan,31.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000267
+819.0,NIK-000816,Perempuan,62.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000267
+820.0,NIK-000817,Perempuan,25.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000267
+821.0,NIK-000818,Laki-laki,56.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000268
+822.0,NIK-000819,Laki-laki,18.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000268
+823.0,NIK-000820,Laki-laki,50.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000268
+824.0,NIK-000821,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000269
+825.0,NIK-000822,Perempuan,44.0,15–59 tahun,SMP,Guru,Dusun II,KK-000269
+826.0,NIK-000823,Perempuan,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000269
+827.0,NIK-000824,Perempuan,38.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000270
+828.0,NIK-000825,Laki-laki,69.0,60+ tahun,S1,Pedagang,Dusun V,KK-000270
+829.0,NIK-000826,Laki-laki,31.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000270
+830.0,NIK-000827,Laki-laki,63.0,60+ tahun,SMP,Buruh,Dusun II,KK-000271
+831.0,NIK-000828,Laki-laki,26.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000271
+832.0,NIK-000829,Perempuan,57.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000271
+833.0,NIK-000830,Perempuan,20.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000272
+834.0,NIK-000831,Perempuan,50.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000272
+835.0,NIK-000832,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000272
+836.0,NIK-000833,Laki-laki,45.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000273
+837.0,NIK-000834,Laki-laki,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000273
+838.0,NIK-000835,Laki-laki,39.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000273
+839.0,NIK-000836,Perempuan,70.0,60+ tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000274
+840.0,NIK-000837,Perempuan,33.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000274
+841.0,NIK-000838,Perempuan,63.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000274
+842.0,NIK-000839,Laki-laki,27.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000275
+843.0,NIK-000840,Laki-laki,58.0,15–59 tahun,S1,Guru,Dusun V,KK-000275
+844.0,NIK-000841,Laki-laki,21.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000275
+845.0,NIK-000842,Laki-laki,52.0,15–59 tahun,SMP,Petani,Dusun II,KK-000276
+846.0,NIK-000843,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000276
+847.0,NIK-000844,Perempuan,46.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000276
+848.0,NIK-000845,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000277
+849.0,NIK-000846,Laki-laki,40.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000277
+850.0,NIK-000847,Laki-laki,71.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000277
+851.0,NIK-000848,Laki-laki,34.0,15–59 tahun,Diploma,Petani,Dusun III,KK-000278
+852.0,NIK-000849,Laki-laki,65.0,60+ tahun,SD,Pedagang,Dusun IV,KK-000278
+853.0,NIK-000850,Laki-laki,27.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000278
+854.0,NIK-000851,Perempuan,59.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000279
+855.0,NIK-000852,Perempuan,22.0,15–59 tahun,SMP,Guru,Dusun II,KK-000279
+856.0,NIK-000853,Perempuan,53.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000279
+857.0,NIK-000854,Laki-laki,16.0,15–59 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000280
+858.0,NIK-000855,Laki-laki,46.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000280
+859.0,NIK-000856,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000280
+860.0,NIK-000857,Laki-laki,41.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000281
+861.0,NIK-000858,Perempuan,72.0,60+ tahun,Diploma,Guru,Dusun III,KK-000281
+862.0,NIK-000859,Perempuan,35.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000281
+863.0,NIK-000860,Perempuan,66.0,60+ tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000282
+864.0,NIK-000861,Laki-laki,29.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000282
+865.0,NIK-000862,Laki-laki,59.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000282
+866.0,NIK-000863,Laki-laki,23.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000283
+867.0,NIK-000864,Laki-laki,54.0,15–59 tahun,SD,Guru,Dusun IV,KK-000283
+868.0,NIK-000865,Perempuan,17.0,15–59 tahun,S1,Pelajar/Mahasiswa,Dusun V,KK-000283
+869.0,NIK-000866,Perempuan,48.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000284
+870.0,NIK-000867,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000284
+871.0,NIK-000868,Laki-laki,42.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000284
+872.0,NIK-000869,Laki-laki,73.0,60+ tahun,SD,Buruh,Dusun IV,KK-000285
+873.0,NIK-000870,Laki-laki,36.0,15–59 tahun,S1,Guru,Dusun V,KK-000285
+874.0,NIK-000871,Laki-laki,67.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000285
+875.0,NIK-000872,Perempuan,30.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000286
+876.0,NIK-000873,Perempuan,61.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000286
+877.0,NIK-000874,Perempuan,23.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000286
+878.0,NIK-000875,Laki-laki,55.0,15–59 tahun,S1,Buruh,Dusun V,KK-000287
+879.0,NIK-000876,Laki-laki,18.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000287
+880.0,NIK-000877,Laki-laki,49.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000287
+881.0,NIK-000878,Laki-laki,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000288
+882.0,NIK-000879,Perempuan,42.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000288
+883.0,NIK-000880,Perempuan,74.0,60+ tahun,S1,Wiraswasta,Dusun V,KK-000288
+884.0,NIK-000881,Perempuan,37.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000289
+885.0,NIK-000882,Laki-laki,68.0,60+ tahun,SMP,Guru,Dusun II,KK-000289
+886.0,NIK-000883,Laki-laki,31.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000289
+887.0,NIK-000884,Laki-laki,62.0,60+ tahun,SD,Petani,Dusun IV,KK-000290
+888.0,NIK-000885,Laki-laki,25.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000290
+889.0,NIK-000886,Perempuan,55.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000290
+890.0,NIK-000887,Perempuan,19.0,15–59 tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000291
+891.0,NIK-000888,Perempuan,50.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000291
+892.0,NIK-000889,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000291
+893.0,NIK-000890,Laki-laki,44.0,15–59 tahun,S1,Petani,Dusun V,KK-000292
+894.0,NIK-000891,Laki-laki,6.0,0–14 tahun,Tidak/Belum Sekolah,Pelajar/Mahasiswa,Dusun I,KK-000292
+895.0,NIK-000892,Laki-laki,38.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000292
+896.0,NIK-000893,Laki-laki,69.0,60+ tahun,Diploma,Buruh,Dusun III,KK-000293
+897.0,NIK-000894,Perempuan,32.0,15–59 tahun,SD,Guru,Dusun IV,KK-000293
+898.0,NIK-000895,Perempuan,63.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000293
+899.0,NIK-000896,Laki-laki,26.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000294
+900.0,NIK-000897,Laki-laki,57.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000294
+901.0,NIK-000898,Laki-laki,19.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000294
+902.0,NIK-000899,Laki-laki,51.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000295
+903.0,NIK-000900,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun V,KK-000295
+904.0,NIK-000901,Perempuan,45.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000295
+905.0,NIK-000902,Perempuan,8.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000296
+906.0,NIK-000903,Perempuan,38.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000296
+907.0,NIK-000904,Laki-laki,70.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000296
+908.0,NIK-000905,Laki-laki,33.0,15–59 tahun,S1,Buruh,Dusun V,KK-000297
+909.0,NIK-000906,Laki-laki,64.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000297
+910.0,NIK-000907,Laki-laki,27.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000297
+911.0,NIK-000908,Perempuan,58.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000298
+912.0,NIK-000909,Perempuan,21.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000298
+913.0,NIK-000910,Perempuan,51.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000298
+914.0,NIK-000911,Laki-laki,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun I,KK-000299
+915.0,NIK-000912,Laki-laki,46.0,15–59 tahun,SMP,Guru,Dusun II,KK-000299
+916.0,NIK-000913,Laki-laki,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000299
+917.0,NIK-000914,Laki-laki,40.0,15–59 tahun,SD,Petani,Dusun IV,KK-000300
+918.0,NIK-000915,Perempuan,70.0,60+ tahun,S1,Pedagang,Dusun V,KK-000300
+919.0,NIK-000916,Perempuan,34.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000300
+920.0,NIK-000917,Perempuan,65.0,60+ tahun,SMP,Ibu Rumah Tangga,Dusun II,KK-000301
+921.0,NIK-000918,Laki-laki,28.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000301
+922.0,NIK-000919,Laki-laki,59.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000301
+923.0,NIK-000920,Laki-laki,22.0,15–59 tahun,S1,Petani,Dusun V,KK-000302
+924.0,NIK-000921,Laki-laki,53.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000302
+925.0,NIK-000922,Perempuan,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000302
+926.0,NIK-000923,Perempuan,47.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000303
+927.0,NIK-000924,Perempuan,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000303
+928.0,NIK-000925,Laki-laki,41.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000303
+929.0,NIK-000926,Laki-laki,72.0,60+ tahun,SMA/SMK,Petani,Dusun I,KK-000304
+930.0,NIK-000927,Laki-laki,34.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000304
+931.0,NIK-000928,Laki-laki,66.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000304
+932.0,NIK-000929,Perempuan,29.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000305
+933.0,NIK-000930,Perempuan,60.0,60+ tahun,S1,Guru,Dusun V,KK-000305
+934.0,NIK-000931,Perempuan,23.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000305
+935.0,NIK-000932,Laki-laki,54.0,15–59 tahun,SMP,Petani,Dusun II,KK-000306
+936.0,NIK-000933,Laki-laki,17.0,15–59 tahun,Diploma,Pelajar/Mahasiswa,Dusun III,KK-000306
+937.0,NIK-000934,Laki-laki,47.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000306
+938.0,NIK-000935,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000307
+939.0,NIK-000936,Perempuan,42.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000307
+940.0,NIK-000937,Perempuan,73.0,60+ tahun,SMP,Perangkat Desa,Dusun II,KK-000307
+941.0,NIK-000938,Perempuan,36.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000308
+942.0,NIK-000939,Laki-laki,66.0,60+ tahun,SD,Pedagang,Dusun IV,KK-000308
+943.0,NIK-000940,Laki-laki,30.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000308
+944.0,NIK-000941,Laki-laki,61.0,60+ tahun,SMA/SMK,Buruh,Dusun I,KK-000309
+945.0,NIK-000942,Laki-laki,24.0,15–59 tahun,SMP,Guru,Dusun II,KK-000309
+946.0,NIK-000943,Laki-laki,55.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000309
+947.0,NIK-000944,Perempuan,18.0,15–59 tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000310
+948.0,NIK-000945,Perempuan,49.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000310
+949.0,NIK-000946,Laki-laki,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000310
+950.0,NIK-000947,Laki-laki,43.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000311
+951.0,NIK-000948,Laki-laki,74.0,60+ tahun,Diploma,Guru,Dusun III,KK-000311
+952.0,NIK-000949,Laki-laki,37.0,15–59 tahun,SD,Perangkat Desa,Dusun IV,KK-000311
+953.0,NIK-000950,Laki-laki,68.0,60+ tahun,S1,Petani,Dusun V,KK-000312
+954.0,NIK-000951,Perempuan,30.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000312
+955.0,NIK-000952,Perempuan,62.0,60+ tahun,SMP,Wiraswasta,Dusun II,KK-000312
+956.0,NIK-000953,Perempuan,25.0,15–59 tahun,Diploma,Ibu Rumah Tangga,Dusun III,KK-000313
+957.0,NIK-000954,Laki-laki,56.0,15–59 tahun,SD,Guru,Dusun IV,KK-000313
+958.0,NIK-000955,Laki-laki,19.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000313
+959.0,NIK-000956,Laki-laki,50.0,15–59 tahun,SMA/SMK,Petani,Dusun I,KK-000314
+960.0,NIK-000957,Laki-laki,13.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun II,KK-000314
+961.0,NIK-000958,Perempuan,43.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000314
+962.0,NIK-000959,Perempuan,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000315
+963.0,NIK-000960,Perempuan,38.0,15–59 tahun,S1,Guru,Dusun V,KK-000315
+964.0,NIK-000961,Laki-laki,69.0,60+ tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000315
+965.0,NIK-000962,Laki-laki,32.0,15–59 tahun,SMP,Petani,Dusun II,KK-000316
+966.0,NIK-000963,Laki-laki,62.0,60+ tahun,Diploma,Pedagang,Dusun III,KK-000316
+967.0,NIK-000964,Laki-laki,26.0,15–59 tahun,SD,Wiraswasta,Dusun IV,KK-000316
+968.0,NIK-000965,Perempuan,57.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000317
+969.0,NIK-000966,Perempuan,20.0,15–59 tahun,SMA/SMK,Guru,Dusun I,KK-000317
+970.0,NIK-000967,Perempuan,51.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000317
+971.0,NIK-000968,Laki-laki,14.0,0–14 tahun,SMP,Pelajar/Mahasiswa,Dusun III,KK-000318
+972.0,NIK-000969,Laki-laki,45.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000318
+973.0,NIK-000970,Laki-laki,7.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun V,KK-000318
+974.0,NIK-000971,Laki-laki,39.0,15–59 tahun,SMA/SMK,Buruh,Dusun I,KK-000319
+975.0,NIK-000972,Perempuan,70.0,60+ tahun,SMP,Guru,Dusun II,KK-000319
+976.0,NIK-000973,Perempuan,33.0,15–59 tahun,Diploma,Perangkat Desa,Dusun III,KK-000319
+977.0,NIK-000974,Perempuan,64.0,60+ tahun,SD,Ibu Rumah Tangga,Dusun IV,KK-000320
+978.0,NIK-000975,Laki-laki,26.0,15–59 tahun,S1,Pedagang,Dusun V,KK-000320
+979.0,NIK-000976,Laki-laki,58.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000320
+980.0,NIK-000977,Laki-laki,21.0,15–59 tahun,SMP,Buruh,Dusun II,KK-000321
+981.0,NIK-000978,Laki-laki,52.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000321
+982.0,NIK-000979,Perempuan,15.0,15–59 tahun,SMP,Pelajar/Mahasiswa,Dusun IV,KK-000321
+983.0,NIK-000980,Perempuan,46.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000322
+984.0,NIK-000981,Perempuan,9.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun I,KK-000322
+985.0,NIK-000982,Laki-laki,39.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000322
+986.0,NIK-000983,Laki-laki,71.0,60+ tahun,Diploma,Buruh,Dusun III,KK-000323
+987.0,NIK-000984,Laki-laki,34.0,15–59 tahun,SD,Guru,Dusun IV,KK-000323
+988.0,NIK-000985,Laki-laki,65.0,60+ tahun,S1,Perangkat Desa,Dusun V,KK-000323
+989.0,NIK-000986,Perempuan,28.0,15–59 tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000324
+990.0,NIK-000987,Perempuan,58.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000324
+991.0,NIK-000988,Perempuan,22.0,15–59 tahun,Diploma,Wiraswasta,Dusun III,KK-000324
+992.0,NIK-000989,Laki-laki,53.0,15–59 tahun,SD,Buruh,Dusun IV,KK-000325
+993.0,NIK-000990,Laki-laki,16.0,15–59 tahun,S1,Pelajar/Mahasiswa,Dusun V,KK-000325
+994.0,NIK-000991,Laki-laki,47.0,15–59 tahun,SMA/SMK,Perangkat Desa,Dusun I,KK-000325
+995.0,NIK-000992,Laki-laki,10.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun II,KK-000326
+996.0,NIK-000993,Laki-laki,41.0,15–59 tahun,Diploma,Pedagang,Dusun III,KK-000326
+997.0,NIK-000994,Perempuan,71.0,60+ tahun,SD,Wiraswasta,Dusun IV,KK-000326
+998.0,NIK-000995,Perempuan,35.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000327
+999.0,NIK-000996,Laki-laki,66.0,60+ tahun,SMA/SMK,Guru,Dusun I,KK-000327
+1000.0,NIK-000997,Laki-laki,29.0,15–59 tahun,SMP,Perangkat Desa,Dusun II,KK-000327
+1001.0,NIK-000998,Laki-laki,60.0,60+ tahun,Diploma,Petani,Dusun III,KK-000328
+1002.0,NIK-000999,Laki-laki,22.0,15–59 tahun,SD,Pedagang,Dusun IV,KK-000328
+1003.0,NIK-001000,Laki-laki,54.0,15–59 tahun,S1,Wiraswasta,Dusun V,KK-000328
+1004.0,NIK-001001,Perempuan,17.0,15–59 tahun,SMA/SMK,Pelajar/Mahasiswa,Dusun I,KK-000329
+1005.0,NIK-001002,Perempuan,48.0,15–59 tahun,SMP,Guru,Dusun II,KK-000329
+1006.0,NIK-001003,Perempuan,11.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun III,KK-000329
+1007.0,NIK-001004,Laki-laki,42.0,15–59 tahun,SD,Petani,Dusun IV,KK-000330
+1008.0,NIK-001005,Laki-laki,73.0,60+ tahun,S1,Pedagang,Dusun V,KK-000330
+1009.0,NIK-001006,Laki-laki,35.0,15–59 tahun,SMA/SMK,Wiraswasta,Dusun I,KK-000330
+1010.0,NIK-001007,Laki-laki,67.0,60+ tahun,SMP,Buruh,Dusun II,KK-000331
+1011.0,NIK-001008,Perempuan,30.0,15–59 tahun,Diploma,Guru,Dusun III,KK-000331
+1012.0,NIK-001009,Perempuan,61.0,60+ tahun,SD,Perangkat Desa,Dusun IV,KK-000331
+1013.0,NIK-001010,Perempuan,24.0,15–59 tahun,S1,Ibu Rumah Tangga,Dusun V,KK-000332
+1014.0,NIK-001011,Laki-laki,54.0,15–59 tahun,SMA/SMK,Pedagang,Dusun I,KK-000332
+1015.0,NIK-001012,Laki-laki,18.0,15–59 tahun,SMP,Wiraswasta,Dusun II,KK-000332
+1016.0,NIK-001013,Laki-laki,49.0,15–59 tahun,Diploma,Buruh,Dusun III,KK-000333
+1017.0,NIK-001014,Laki-laki,12.0,0–14 tahun,SD,Pelajar/Mahasiswa,Dusun IV,KK-000333
+1018.0,NIK-001015,Perempuan,43.0,15–59 tahun,S1,Perangkat Desa,Dusun V,KK-000333
+1019.0,NIK-001016,Perempuan,74.0,60+ tahun,SMA/SMK,Ibu Rumah Tangga,Dusun I,KK-000334
+1020.0,NIK-001017,Perempuan,37.0,15–59 tahun,SMP,Pedagang,Dusun II,KK-000334
+1021.0,NIK-001018,Laki-laki,67.0,60+ tahun,Diploma,Wiraswasta,Dusun III,KK-000334

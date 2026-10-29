@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><title>Akses Studio Desa</title></head>
+<body style="margin:0"><script>
+// Streamlit Components v1 message protocol. No external scripts or evaluation.
+const parentOrigin = document.referrer ? new URL(document.referrer).origin : location.origin;
+let lastCommand = null;
+let lastResponse = null;
+function send(type, data) {
+  parent.postMessage({isStreamlitMessage:true,type,...data}, parentOrigin);
+}
+function readCookie(name) {
+  const prefix = encodeURIComponent(name) + '=';
+  const entry = document.cookie.split('; ').find(part => part.startsWith(prefix));
+  return entry ? decodeURIComponent(entry.slice(prefix.length)) : '';
+}
+window.addEventListener('message', event => {
+  if (event.source !== parent || event.origin !== parentOrigin || event.data.type !== 'streamlit:render') return;
+  const args = event.data.args;
+  let available = true;
+  let cookies = {};
+  try {
+    if (args.command && args.command.nonce !== lastCommand) {
+      for (const [role, value] of Object.entries(args.command.values)) {
+        const name = args.names[role];
+        if (!name || !/^[A-Za-z0-9_]+$/.test(name)) continue;
+        let attributes = '; Path=/; SameSite=Strict';
+        if (location.protocol === 'https:') attributes += '; Secure';
+        if (!value.token) attributes += '; Max-Age=0';
+        else if (value.remember) attributes += '; Max-Age=' + args.max_age;
+        document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value.token || '') + attributes;
+        if (value.token && readCookie(name) !== value.token) available = false;
+      }
+      lastCommand = args.command.nonce;
+    }
+    for (const [role,name] of Object.entries(args.names)) cookies[role] = readCookie(name);
+  } catch (_) { available = false; }
+  const response = {ready:true,available,cookies,ack:args.command ? args.command.nonce : ''};
+  const serialized = JSON.stringify(response);
+  if (serialized !== lastResponse) {
+    lastResponse = serialized;
+    send('streamlit:setComponentValue',{value:response,dataType:'json'});
+  }
+  send('streamlit:setFrameHeight',{height:0});
+});
+send('streamlit:componentReady',{apiVersion:1});
+</script></body></html>

@@ -1,0 +1,13 @@
+ID,tanggal,jenis_layanan,dusun,status,lama_proses
+1,2024-12-10,Surat pengantar,Dusun Contoh B,Selesai,2
+2,2024-12-10,Surat keterangan,Dusun Contoh A,Diproses,3
+3,2025-01-10,Surat pengantar,Dusun Contoh B,Menunggu,4
+4,2025-01-10,Surat keterangan,Dusun Contoh A,Selesai,5
+5,2025-02-10,Surat pengantar,Dusun Contoh B,Selesai,1
+6,2025-02-10,Surat keterangan,Dusun Contoh A,Diproses,2
+7,2025-03-10,Surat pengantar,Dusun Contoh B,Menunggu,3
+8,2025-03-10,Surat keterangan,Dusun Contoh A,Selesai,4
+9,2025-04-10,Surat pengantar,Dusun Contoh B,Selesai,5
+10,2025-04-10,Surat keterangan,Dusun Contoh A,Diproses,1
+11,2025-05-10,Surat pengantar,Dusun Contoh B,Menunggu,2
+12,2025-05-10,Surat keterangan,Dusun Contoh A,Selesai,3

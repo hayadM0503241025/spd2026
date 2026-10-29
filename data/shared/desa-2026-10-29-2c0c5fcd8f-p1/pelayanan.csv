@@ -1,0 +1,21 @@
+ID,tanggal,bulan,jenis_layanan,dusun,status,lama_proses
+1.0,2025-01-10,2025-01,Surat Keterangan,Dusun I,Selesai,2.0
+2.0,2025-02-15,2025-02,Surat Pengantar,Dusun II,Selesai,1.0
+3.0,2025-03-20,2025-03,Permohonan,Dusun III,Diproses,3.0
+4.0,2025-04-25,2025-04,Lainnya,Dusun IV,Menunggu,0.0
+5.0,2025-05-05,2025-05,Surat Keterangan,Dusun V,Selesai,1.0
+6.0,2025-06-12,2025-06,Surat Pengantar,Dusun I,Selesai,2.0
+7.0,2025-07-18,2025-07,Permohonan,Dusun II,Diproses,4.0
+8.0,2025-08-22,2025-08,Lainnya,Dusun III,Menunggu,0.0
+9.0,2025-09-30,2025-09,Surat Keterangan,Dusun IV,Selesai,1.0
+10.0,2025-10-05,2025-10,Surat Pengantar,Dusun V,Selesai,2.0
+11.0,2025-11-11,2025-11,Permohonan,Dusun I,Diproses,3.0
+12.0,2025-12-20,2025-12,Lainnya,Dusun II,Selesai,5.0
+13.0,2025-01-25,2025-01,Surat Keterangan,Dusun III,Selesai,1.0
+14.0,2025-02-28,2025-02,Surat Pengantar,Dusun IV,Selesai,2.0
+15.0,2025-03-15,2025-03,Permohonan,Dusun V,Diproses,2.0
+16.0,2025-04-10,2025-04,Surat Keterangan,Dusun I,Selesai,1.0
+17.0,2025-05-20,2025-05,Surat Pengantar,Dusun II,Menunggu,0.0
+18.0,2025-06-25,2025-06,Permohonan,Dusun III,Selesai,3.0
+19.0,2025-07-05,2025-07,Surat Keterangan,Dusun IV,Diproses,2.0
+20.0,2025-08-15,2025-08,Surat Pengantar,Dusun V,Selesai,1.0

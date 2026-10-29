@@ -1,0 +1,9 @@
+ID,potensi,alamat,latitude,longitude,kategori,kondisi,keterangan
+1.0,"Padi, Jagung, Sayuran",Dusun I,,,Pertanian,Baik,50.0
+2.0,"Kelapa, Kopi, Kakao",Dusun II,,,Perkebunan,Berkembang,30.0
+3.0,"Sapi, Kambing, Ayam",Dusun III,,,Peternakan,Baik,100.0
+4.0,"Budidaya Lele, Nila",Dusun IV,,,Perikanan,Berkembang,20.0
+5.0,"Wisata Alam, Budaya",Dusun V,,,Pariwisata,Perlu Pembinaan,2.0
+6.0,"Keripik, Anyaman, Kopi",Dusun I,,,UMKM Unggulan,Berkembang,15.0
+7.0,Kopo,Dusun I,,,UMKM Unggulan,Baik,59.0
+8.0,Mie Ayam Bakso,Dusun II,,,Pertanian,Berkembang,23.0

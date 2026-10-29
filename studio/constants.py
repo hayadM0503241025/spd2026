@@ -1,0 +1,28 @@
+from types import MappingProxyType
+
+DATASETS = MappingProxyType({
+    'penduduk': 'Data_Penduduk', 'pelayanan': 'Data_Pelayanan',
+    'umkm': 'Data_UMKM', 'potensi': 'Potensi_Desa',
+})
+LABELS = MappingProxyType({
+    'penduduk': 'Penduduk', 'pelayanan': 'Pelayanan',
+    'umkm': 'UMKM', 'potensi': 'Potensi desa',
+})
+METHODS = MappingProxyType({
+    'count': 'Jumlah baris', 'count_filled': 'Jumlah nilai terisi',
+    'nunique': 'Jumlah nilai unik', 'sum': 'Penjumlahan',
+    'mean': 'Rata-rata', 'median': 'Median', 'min': 'Minimum',
+    'max': 'Maksimum', 'percentage': 'Persentase',
+})
+KINDS = MappingProxyType({
+    'kpi': 'Kartu indikator', 'bar': 'Batang vertikal',
+    'hbar': 'Batang horizontal', 'line': 'Grafik garis',
+    'pie': 'Pie', 'donut': 'Donut', 'table': 'Tabel ringkasan',
+    'note': 'Catatan',
+})
+PRIVATE_COLUMNS = frozenset({'nik', 'no_kk', 'nama', 'nama_lengkap', 'tanggal_lahir', 'ID'})
+NUMERIC_METHODS = frozenset({'sum', 'mean', 'median', 'min', 'max'})
+NON_MEASURES = frozenset({'ID', 'nik', 'no_kk', 'latitude', 'longitude', 'keterangan'})
+OPERATORS = frozenset({'equals', 'not_equals', 'in', 'not_null', 'is_null', 'gte', 'lte'})
+MAX_DESIGN_BYTES = 2 * 1024 * 1024
+SCHEMA_VERSION = 1
