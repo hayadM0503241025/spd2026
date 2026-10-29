@@ -6,7 +6,7 @@ import re
 from uuid import uuid4
 import pandas as pd
 from studio.constants import (SCHEMA_VERSION, MAX_DESIGN_BYTES, KINDS, METHODS,
-                              PRIVATE_COLUMNS, OPERATORS, NUMERIC_METHODS, PIVOT_VISUALS)
+                              PRIVATE_COLUMNS, OPERATORS, NUMERIC_METHODS, PIVOT_VISUALS, pivot_visuals)
 from studio.data import load_shared
 from studio.aggregation import numeric_columns
 from studio.presentation import apply_visual_defaults
@@ -185,8 +185,8 @@ def check_component(item, bundle, columns=3):
         require(pivot['column'] not in PRIVATE_COLUMNS, 'Kolom identitas pribadi tidak boleh menjadi dimensi pivot.')
         require(pivot['granularity'] in ('category','day','month','year'), 'Pengelompokan waktu kolom pivot tidak sah.')
         require(isinstance(pivot['visualization'],str) and pivot['visualization'] in PIVOT_VISUALS, 'Visualisasi pivot tidak tersedia.')
-        if pivot['visualization']=='stacked':
-            require(item['method'] in ('count','count_filled','sum'), 'Batang bertumpuk membutuhkan jumlah baris, nilai terisi, atau penjumlahan.')
+        require(pivot['visualization'] in pivot_visuals(item['method']),
+                'Visualisasi ini membutuhkan jumlah baris, nilai terisi, atau penjumlahan.')
     check_color(item['color'])
     integer(item['decimals'],0,4,'Desimal')
     for key in ('row','position'):

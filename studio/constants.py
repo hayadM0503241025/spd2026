@@ -22,8 +22,19 @@ KINDS = MappingProxyType({
 })
 PIVOT_VISUALS = MappingProxyType({
     'bar': 'Batang berkelompok', 'stacked': 'Batang bertumpuk',
-    'hbar': 'Batang horizontal', 'heatmap': 'Peta warna (heatmap)',
+    'hbar': 'Batang horizontal', 'line': 'Grafik garis',
+    'area': 'Grafik area', 'scatter': 'Grafik titik (scatter)',
+    'bubble': 'Diagram gelembung (bubble)', 'pie': 'Pie', 'donut': 'Donut',
+    'heatmap': 'Peta warna (heatmap)', 'treemap': 'Treemap',
 })
+PIVOT_ADDITIVE_VISUALS = frozenset({'stacked','area','pie','donut','treemap'})
+
+
+def pivot_visuals(method):
+    return [visual for visual in PIVOT_VISUALS
+            if visual not in PIVOT_ADDITIVE_VISUALS or method in ('count','count_filled','sum')]
+
+
 PRIVATE_COLUMNS = frozenset({'nik', 'no_kk', 'nama', 'nama_lengkap', 'tanggal_lahir', 'ID'})
 NUMERIC_METHODS = frozenset({'sum', 'mean', 'median', 'min', 'max'})
 NON_MEASURES = frozenset({'ID', 'nik', 'no_kk', 'latitude', 'longitude', 'keterangan'})

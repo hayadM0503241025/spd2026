@@ -5,6 +5,7 @@ from studio.aggregation import calculate_pivot, scalar, compute_component
 from studio.config import new_component, new_design, export_design, import_design, DesignError
 from studio.rendering import build_pivot_figure
 from studio.presentation import apply_visual_defaults
+from studio.constants import PIVOT_VISUALS, pivot_visuals
 
 
 def test_pivot_matches_population_indicator_and_leaves_source_unchanged(bundle):
@@ -81,7 +82,7 @@ def test_pivot_dates_missing_measurements_and_zero_denominator():
     assert calculate_pivot(frame.iloc[:0],{'method':'count'},'tanggal','status').rows==0
 
 
-@pytest.mark.parametrize('visual',['bar','stacked','hbar','heatmap'])
+@pytest.mark.parametrize('visual',list(PIVOT_VISUALS))
 def test_pivot_chart_contains_exact_cells_without_total_records(bundle,visual):
     design=new_design(bundle)
     item=population_pivot(visual)
@@ -90,11 +91,80 @@ def test_pivot_chart_contains_exact_cells_without_total_records(bundle,visual):
     if visual=='heatmap':
         assert figure.data[0].z.tolist()==result.table.iloc[:-1,:-1].values.tolist()
         assert 'Total' not in list(figure.data[0].x)+list(figure.data[0].y)
+    elif visual in ('pie','donut'):
+        assert sum(figure.data[0].values)==1019
+        assert 'Dusun I / Laki-laki' in figure.data[0].labels
+        assert all('Total' not in label for label in figure.data[0].labels)
+        assert len(set(figure.data[0].marker.colors))>1
+    elif visual=='treemap':
+        trace=figure.data[0]
+        parents=set(trace.parents)
+        assert sum(value for node,value in zip(trace.ids,trace.values) if node not in parents)==1019
+        assert all('Total' not in node for node in trace.ids)
     else:
         values=[float(value) for trace in figure.data for value in (trace.x if visual=='hbar' else trace.y)]
         assert sum(values)==1019
         assert [trace.name for trace in figure.data]==['Laki-laki','Perempuan']
-        assert [trace.marker.color for trace in figure.data][0]!=figure.data[1].marker.color
+        colors=[trace.line.color if visual in ('line','area') else trace.marker.color for trace in figure.data]
+        assert colors[0]!=colors[1]
+        for trace in figure.data:
+            assert 'Total' not in (trace.y if visual=='hbar' else trace.x)
+    assert figure.to_json()  # Includes every plot type's payload used by Streamlit.
+    design['components']=[item]
+    restored,_=import_design(export_design(design,bundle))
+    assert restored['components'][0]['pivot']['visualization']==visual
+
+
+@pytest.mark.parametrize('visual',['stacked','area','pie','donut','treemap'])
+def test_non_additive_indicators_offer_compatible_visuals_and_reject_incompatible_json(bundle,visual):
+    assert visual not in pivot_visuals('mean')
+    assert {'bar','hbar','line','scatter','bubble','heatmap'} <= set(pivot_visuals('mean'))
+    design=new_design(bundle)
+    item=population_pivot(visual)
+    item.update(method='mean',value_column='usia')
+    design['components']=[item]
+    with pytest.raises(DesignError,match='Visualisasi'):
+        export_design(design,bundle)
+
+
+def test_pie_slice_colors_stay_consistent_when_rows_are_filtered(bundle):
+    design=new_design(bundle)
+    item=population_pivot('donut')
+    full=compute_component(bundle,design,item)
+    rows=list(full.table.index[:-1])
+    columns=list(full.table.columns[:-1])
+    figure=build_pivot_figure(full,item,columns,rows)
+    full_colors=dict(zip(figure.data[0].labels,figure.data[0].marker.colors))
+    item['local_filters']=[{'column':'dusun','kind':'category','value':['Dusun IV']}]
+    filtered=compute_component(bundle,design,item)
+    figure=build_pivot_figure(filtered,item,columns,rows)
+    assert list(figure.data[0].marker.colors)==[full_colors[label] for label in figure.data[0].labels]
+    assert sum(figure.data[0].values)==204
+
+
+def test_new_pivot_charts_keep_missing_values_and_handle_negative_or_zero_data():
+    frame=pd.DataFrame({'a':['A','B','B'],'b':['X','X','Y'],
+                        'nilai':pd.Series([10,None,-2],dtype='Float64')})
+    item=population_pivot('line')
+    item.update(method='sum',value_column='nilai')
+    result=calculate_pivot(frame,item,'a','b')
+    figure=build_pivot_figure(result,item)
+    assert any(pd.isna(value) for trace in figure.data for value in trace.y)
+    for visual in ('pie','donut','treemap','bubble','area'):
+        item['pivot']['visualization']=visual
+        with pytest.raises(ValueError,match='nonnegatif'):
+            build_pivot_figure(result,item)
+    frame['nilai']=pd.Series([10,None,2],dtype='Float64')
+    result=calculate_pivot(frame,item,'a','b')
+    item['pivot']['visualization']='bubble'
+    figure=build_pivot_figure(result,item)
+    assert all(pd.notna(value) for trace in figure.data for value in trace.marker.size)
+    frame['nilai']=0
+    result=calculate_pivot(frame,item,'a','b')
+    for visual in ('pie','donut','treemap','bubble'):
+        item['pivot']['visualization']=visual
+        with pytest.raises(ValueError,match='positif'):
+            build_pivot_figure(result,item)
 
 
 def test_pivot_json_and_storage_preserve_filters_and_both_outputs(bundle,store):

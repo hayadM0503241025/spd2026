@@ -38,6 +38,14 @@ Pengujian tambahan mencakup:
 
 Browser dicoba kembali melalui skill Browser, tetapi tidak ada browser yang tersedia. Alur di atas diuji melalui AppTest dan perhitungan/objek grafik, belum melalui pemeriksaan visual browser langsung. Tidak ada data dasar atau hasil kelompok nyata yang diubah oleh pengujian.
 
+### Sebelas pilihan visualisasi pivot — 30 Oktober 2026
+
+Setelah menambahkan grafik garis, area, scatter, bubble, pie, donut, dan treemap, suite Python lulus: **116 passed, 2 warnings in 37.53s**. Perintah memakai `-q --tb=short --maxfail=3 -p no:cacheprovider` dan `--basetemp` baru di `outputs/`. Dua peringatan tetap berasal dari protobuf.
+
+Pengujian memeriksa nilai grafik pada seluruh 11 bentuk: tiga varian batang, garis, area, scatter, bubble, pie, donut, heatmap, dan treemap. Grafik mengecualikan total pivot; jumlah irisan pie/donut dan daun treemap sesuai jumlah sel tabel. Pilihan metode dan validasi JSON memakai daftar visualisasi yang sama. Pie/donut mempertahankan warna bagian saat filter berubah. Nilai kosong pada garis tidak diubah menjadi nol; bubble melewati ukuran kosong. Grafik yang membutuhkan nilai positif/nonnegatif menangani cakupan nol/negatif dengan penjelasan tanpa mengganti nilai tabel.
+
+AppTest mencoba tujuh bentuk baru melalui pilihan Visualisasi pivot, penambahan ke dashboard, tampilan tabel bersama grafik di Pratinjau, simpan/muat JSON, dan pembukaan ulang untuk edit. Tabel dan indikator tetap sama saat bentuk grafik diganti. Pengujian ini tidak mencakup pemeriksaan visual browser langsung; batas verifikasi browser di atas tetap berlaku.
+
 | Pemeriksaan | Hasil |
 | --- | --- |
 | Jumlah baris, nilai terisi, nilai unik, dan KK unik | Lulus |

@@ -154,3 +154,29 @@ def test_numeric_pivot_and_date_grouping_use_source_values():
     frame=load_shared().frame('pelayanan')
     assert app.dataframe[0].value.loc['Total','Total']==pytest.approx(frame.lama_proses.mean())
     assert 'Batang bertumpuk' not in next(widget for widget in app.selectbox if widget.label=='Visualisasi pivot').options
+
+
+@pytest.mark.parametrize('visual',['line','area','scatter','bubble','pie','donut','treemap'])
+def test_new_pivot_visuals_can_be_selected_saved_and_reopened(visual):
+    app=start()
+    open_pivot(app)
+    app.button(key='show_pivot').click().run()
+    healthy(app)
+    original=app.dataframe[0].value.copy(deep=True)
+    select(app,'Visualisasi pivot',visual)
+    assert app.dataframe[0].value.equals(original)
+    assert len(app.get('plotly_chart'))==1
+    app.button(key='save_pivot').click().run()
+    healthy(app)
+    assert app.radio(key='stage').value=='Pratinjau'
+    assert len(app.dataframe)==len(app.get('plotly_chart'))==1
+    assert app.dataframe[0].value.equals(original)
+    item=app.session_state['design']['components'][0]
+    assert item['pivot']['visualization']==visual
+    restored,bundle=import_design(export_design(app.session_state['design'],load_shared()))
+    assert restored['components'][0]['pivot']['visualization']==visual
+    assert compute_component(bundle,restored,restored['components'][0]).total==1019
+    goto(app,'Rancang Dashboard')
+    app.button(key='edit_'+item['id']).click().run()
+    healthy(app)
+    assert next(widget for widget in app.selectbox if widget.label=='Visualisasi pivot').value==visual

@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 from studio.aggregation import compute_component, public_columns, numeric_columns
 from studio.config import new_component
-from studio.constants import LABELS, METHODS, NUMERIC_METHODS, PIVOT_VISUALS
+from studio.constants import LABELS, METHODS, NUMERIC_METHODS, PIVOT_VISUALS, pivot_visuals
 from studio.rendering import render_pivot_table, render_pivot_chart
 from studio.ui_builder import index_of, condition_editor, save_current
 from studio.ui_filters import local_filter_editor, render_local_filters
@@ -111,7 +111,7 @@ def pivot_builder(bundle,design):
         render_pivot_table(result,item)
     else:
         st.info('Tidak ada data sesuai filter.')
-    visuals=[visual for visual in PIVOT_VISUALS if visual!='stacked' or item['method'] in ('count','count_filled','sum')]
+    visuals=pivot_visuals(item['method'])
     item['pivot']['visualization']=st.selectbox('Visualisasi pivot',visuals,
                 index=index_of(visuals,initial['pivot']['visualization']),format_func=lambda value:PIVOT_VISUALS[value],
                 key=prefix+'_visual_'+item['method'])

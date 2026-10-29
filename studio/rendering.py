@@ -10,6 +10,7 @@ from studio.aggregation import compute_component, format_id, calculate
 from studio.config import ordered_components
 from studio.ui_filters import render_local_filters
 from studio.presentation import PALETTE
+from studio.constants import PIVOT_VISUALS, pivot_visuals
 
 
 def render_component(bundle, design, item, key_prefix='canvas', interactive_filters=False):
@@ -79,20 +80,40 @@ def render_pivot_chart(bundle,result,item,key_prefix):
         return
     order=calculate(bundle.frame(item['dataset']),{'method':'count'},item['pivot']['column'],
                     item['pivot']['granularity']).table.Kategori.map(str).tolist()
-    figure=build_pivot_figure(result,item,order)
+    row_order=calculate(bundle.frame(item['dataset']),{'method':'count'},item['dimension'],
+                        item['granularity']).table.Kategori.map(str).tolist()
+    try:
+        figure=build_pivot_figure(result,item,order,row_order)
+    except ValueError as exc:
+        st.info(str(exc))
+        return
     st.plotly_chart(figure,key=f'{key_prefix}_{item["id"]}_pivot',width='stretch',
                     config={'displaylogo':False,'scrollZoom':False})
+    if item['pivot']['visualization'] in ('pie','donut','treemap'):
+        st.caption('Setiap bagian mewakili kombinasi baris dan kolom pivot. Nilai nol/kosong tidak membentuk bagian grafik.')
+    elif item['pivot']['visualization']=='line':
+        st.caption('Garis mengikuti urutan baris pivot; kolom tanggal yang dikelompokkan mengikuti urutan waktu.')
 
 
-def build_pivot_figure(result,item,series_order=None):
+def build_pivot_figure(result,item,series_order=None,row_order=None):
     """Chart the same pivot cells, excluding the recalculated margins."""
     cells=result.cells.copy()
     unit='%' if item['method']=='percentage' else item['unit']
     display=lambda value:format_id(value,item['decimals'],unit)
     cells['Tampilan']=cells.Nilai.map(display)
     series_order=list(result.table.columns[:-1]) if series_order is None else series_order
+    row_order=list(result.table.index[:-1]) if row_order is None else row_order
     colors={label:PALETTE[index%len(PALETTE)] for index,label in enumerate(series_order)}
+    row_colors={label:PALETTE[index%len(PALETTE)] for index,label in enumerate(row_order)}
     visual=item['pivot']['visualization']
+    if visual not in pivot_visuals(item['method']):
+        raise ValueError('Visualisasi ini membutuhkan jumlah baris, nilai terisi, atau penjumlahan.')
+    if visual in ('pie','donut','treemap','bubble') and ((cells.Nilai.dropna()<0).any() or cells.Nilai.sum()<=0):
+        raise ValueError(f'{PIVOT_VISUALS[visual]} membutuhkan nilai nonnegatif dengan setidaknya satu nilai positif. Pilih batang, garis, atau titik untuk cakupan ini.')
+    if visual=='area' and (cells.Nilai.isna().any() or (cells.Nilai<0).any()):
+        raise ValueError('Grafik area membutuhkan nilai lengkap dan nonnegatif. Pilih grafik garis atau titik untuk mempertahankan nilai kosong/negatif.')
+    orders={'Baris':list(result.table.index[:-1]),'Kolom':series_order}
+    labels={'Baris':item['dimension'],'Kolom':item['pivot']['column'],'Nilai':unit or 'Nilai'}
     if visual=='heatmap':
         body=result.table.iloc[:-1,:-1]
         figure=go.Figure(go.Heatmap(x=body.columns.tolist(),y=body.index.tolist(),
@@ -101,13 +122,48 @@ def build_pivot_figure(result,item,series_order=None):
                         hovertemplate='%{y} / %{x}<br>%{customdata}<extra></extra>',hoverongaps=False))
         figure.update_xaxes(title=item['pivot']['column'])
         figure.update_yaxes(title=item['dimension'],autorange='reversed')
+    elif visual in ('pie','donut'):
+        portions=cells.loc[cells.Nilai.gt(0)].copy()
+        portions['Bagian']=portions.Baris+' / '+portions.Kolom
+        figure=px.pie(portions,names='Bagian',values='Nilai',hole=.6 if visual=='donut' else 0,
+                       custom_data=['Tampilan'])
+        # Use the full baseline's row/column order so filters keep slice colors.
+        row_positions={row:index for index,row in enumerate(row_order)}
+        column_positions={column:index for index,column in enumerate(series_order)}
+        figure.update_traces(marker_colors=[PALETTE[(row_positions[row]*len(series_order)+column_positions[column])%len(PALETTE)]
+                                             for row,column in zip(portions.Baris,portions.Kolom)],
+                              textposition='inside',textinfo='percent',
+                              hovertemplate='%{label}<br>%{customdata[0]}<extra></extra>')
+        figure.update_layout(legend=dict(orientation='h',y=-.2,x=0))
+    elif visual=='treemap':
+        portions=cells.loc[cells.Nilai.gt(0)].copy()
+        figure=px.treemap(portions,path=['Baris','Kolom'],values='Nilai',color='Baris',
+                           color_discrete_map=row_colors,labels=labels)
+        for trace in figure.data:
+            trace.customdata=[[display(value)] for value in trace.values]
+        figure.update_traces(hovertemplate='%{label}<br>%{customdata[0]}<extra></extra>')
+    elif visual in ('line','area','scatter','bubble'):
+        options=dict(data_frame=cells,x='Baris',y='Nilai',color='Kolom',custom_data=['Tampilan'],
+                     color_discrete_map=colors,category_orders=orders,labels=labels)
+        if visual=='line':
+            figure=px.line(**options,markers=True)
+            figure.update_traces(line_width=3,connectgaps=False)
+        elif visual=='area':
+            figure=px.area(**options)
+        else:
+            if visual=='bubble':
+                options['data_frame']=cells.loc[cells.Nilai.notna()]
+            figure=px.scatter(**options,**({'size':'Nilai','size_max':42} if visual=='bubble' else {}))
+            if visual=='scatter':
+                figure.update_traces(marker_size=9)
+        figure.update_traces(hovertemplate='%{x}<br>%{customdata[0]}<extra>%{fullData.name}</extra>')
+        figure.update_layout(legend=dict(orientation='h',y=-.25,x=0))
     else:
         horizontal=visual=='hbar'
         figure=px.bar(cells,x='Nilai' if horizontal else 'Baris',y='Baris' if horizontal else 'Nilai',
                        color='Kolom',orientation='h' if horizontal else 'v',
                        barmode='relative' if visual=='stacked' else 'group',custom_data=['Tampilan'],
-                       color_discrete_map=colors,category_orders={'Baris':list(result.table.index[:-1]),'Kolom':series_order},
-                       labels={'Baris':item['dimension'],'Kolom':item['pivot']['column'],'Nilai':unit or 'Nilai'})
+                       color_discrete_map=colors,category_orders=orders,labels=labels)
         figure.update_traces(hovertemplate=('%{y}' if horizontal else '%{x}')+'<br>%{customdata[0]}<extra>%{fullData.name}</extra>')
         figure.update_layout(legend=dict(orientation='h',y=-.25,x=0))
     figure.update_layout(height=350,margin=dict(l=8,r=8,t=12,b=40),paper_bgcolor='rgba(0,0,0,0)',
