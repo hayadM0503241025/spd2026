@@ -147,6 +147,14 @@ Filter di Pratinjau/Presentasi tampil sebagai deretan tombol ringkas di atas das
 
 Pada pembaruan dari versi awal, contoh bawaan yang benar-benar belum diedit dipindahkan dari dashboard kerja menjadi contoh Beranda. Nama kelompok dipertahankan. Desain yang sudah diubah peserta tidak dibersihkan otomatis, dan JSON yang dimuat secara eksplisit tetap memulihkan komponen yang tersimpan.
 
+### Contoh penggunaan pivot
+
+Buka **Panduan → Contoh implementasi pivot**. Contoh interaktif memakai data penduduk bersama dengan **Baris pivot = dusun**, **Kolom pivot = jenis_kelamin**, dan nilai **jumlah baris (jiwa)**. Pada data versi `desa-2026-10-29-2c0c5fcd8f-p1`, Dusun I berisi 123 laki-laki dan 81 perempuan, total 204 jiwa. Total seluruh dusun adalah 1.019 jiwa.
+
+Ganti baris/kolom menjadi pendidikan, pekerjaan, atau kelompok usia untuk mencoba pengelompokan lain. Gunakan tombol **Filter dusun** untuk membatasi cakupan; pilihan kosong memakai semua dusun. Kolom dan baris Total mengikuti cakupan yang sama dengan indikator Jumlah baris. Kategori kosong tetap dihitung sebagai `(Kosong)`.
+
+**Lihat kode Python pivot** menampilkan contoh `pd.pivot_table()` yang mengikuti pilihan saat ini dan versi data yang dipakai. Pilihan latihan berada di sesi masing-masing serta dipertahankan saat berpindah halaman. Contoh ini berada di Panduan; konfigurasi JSON tetap menyimpan komponen yang dibuat melalui builder.
+
 ### Ketepatan indikator
 
 Satu mesin `studio/aggregation.py` dipakai oleh KPI, grafik, dan tabel. Grafik mengubah penyajian, bukan rumus. Dengan dataset, definisi, metode, dan filter sama, total indikator akan sama antarkelompok.
@@ -217,6 +225,7 @@ studio/browser_session/        komponen browser tanpa dependensi JavaScript ekst
 studio/workspace.py            transisi draft dan konfirmasi penggantian
 studio/rendering.py            rendering KPI, Plotly, tabel, catatan dan grid
 studio/ui*.py                  beranda, builder, filter, simpan/muat, panduan
+studio/ui_pivot.py              contoh pivot interaktif dan kode Python di Panduan
 data/shared/<versi>/           baseline CSV terolah dan manifest
 data/registry.json             versi aktif dan katalog versi yang tersedia
 data/examples/                 empat CSV sintetis untuk pembelajaran

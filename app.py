@@ -82,6 +82,6 @@ else:
         elif page=='Hasil Kelompok':
             results_page(store)
         elif page=='Panduan':
-            guide()
+            guide(bundle)
     except (StoreUnavailable,AccessDenied,Conflict) as exc:
         st.error(str(exc))

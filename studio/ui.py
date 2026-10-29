@@ -10,6 +10,7 @@ from studio.validation import profile
 from studio.presentation import kpi_styles
 from studio.workspace import apply_design,go,start_blank,request_action,has_work
 from studio.ui_access import group_panel,own_save_panel
+from studio.ui_pivot import pivot_example
 from studio.access import group_access,facilitator_access,logout_facilitator
 
 STAGES=('Beranda','Periksa Data','Rancang Dashboard','Pratinjau','Simpan & Muat','Hasil Kelompok','Panduan')
@@ -186,7 +187,7 @@ def save_load(bundle,design,store=None):
     st.info('Lanjutkan melalui Akses kelompok dengan kode pribadi untuk membuka hasil tersimpan, atau muat JSON sebagai salinan desain. JSON tidak memberikan akses ke akun kelompok asalnya. Tidak perlu mengunggah ulang workbook.')
 
 
-def guide():
+def guide(bundle):
     st.title('Dari pertanyaan ke keputusan.')
     st.write('Awali dari informasi yang dibutuhkan kepala desa atau warga. Pilih sumber yang sesuai, sepakati definisi indikator, kemudian gunakan grafik untuk menjelaskannya.')
     st.dataframe([
@@ -202,6 +203,7 @@ def guide():
     st.write('Persentase layanan selesai = layanan berstatus Selesai ÷ semua layanan pada cakupan yang sama × 100%. Penyebut nol ditampilkan sebagai Tidak tersedia. Rata-rata lama pelayanan harus menyebut status yang dihitung. Periode omzet tidak diketahui dari workbook.')
     st.subheader('Filter mempunyai cakupan')
     st.write('Di Rancang Dashboard → Filter dashboard, cukup pilih kolom. Seluruh isi kolom otomatis tersedia di Pratinjau. Misalnya Dusun menyediakan Dusun I sampai V tanpa mengetik pilihan tersebut. Pilihan kosong berarti semua data. Nama dataset pada pilihan kolom menunjukkan cakupannya: Dusun berlaku untuk penduduk dan pelayanan, sedangkan alamat UMKM/potensi tetap kolom terpisah. Filter khusus komponen juga cukup dipilih kolomnya; nilainya dipilih pada komponen tersebut di Pratinjau.')
+    pivot_example(bundle)
     st.subheader('Latihan dengan CSV sintetis')
     st.caption('Berkas berikut terpisah dari data dasar bersama. Hanya untuk mempelajari struktur data; tidak dapat mengganti dataset latihan aplikasi.')
     for name in ('penduduk','pelayanan','umkm','potensi'):

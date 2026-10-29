@@ -82,6 +82,32 @@ def calculate(frame, spec, dimension=None, granularity='category'):
     return Result(total, table, len(frame), '', reason)
 
 
+def count_pivot(frame, rows, columns):
+    """Cross-tabulate record counts without changing the shared source frame."""
+    if rows == columns:
+        raise IndicatorError('Pilih kolom berbeda untuk baris dan kolom pivot.')
+    for column in (rows, columns):
+        if column not in frame:
+            raise IndicatorError(f'Kolom pivot {column} tidak tersedia.')
+        if column in PRIVATE_COLUMNS:
+            raise IndicatorError('Identitas pribadi tidak boleh menjadi dimensi pivot.')
+    if frame.empty:
+        return pd.DataFrame(index=pd.Index([], name=rows),
+                            columns=pd.Index([], name=columns), dtype='int64')
+    # Include missing categories, just as calculate() does for chart dimensions.
+    data = frame[[rows, columns]].astype('string').fillna('(Kosong)')
+    total_label = 'Total'
+    while any(data[column].eq(total_label).any() for column in (rows, columns)):
+        total_label += ' keseluruhan'
+    count_column = '_jumlah_record'
+    while count_column in data:
+        count_column += '_'
+    data[count_column] = 1
+    return pd.pivot_table(data, index=rows, columns=columns, values=count_column,
+                          aggfunc='sum', fill_value=0, margins=True,
+                          margins_name=total_label, observed=True)
+
+
 def compute_component(bundle, design, component):
     dataset = component['dataset']
     frame = apply_filters(bundle.frame(dataset), dataset, design['filters'], component['local_filters'])

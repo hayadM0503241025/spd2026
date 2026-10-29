@@ -16,6 +16,12 @@ node --test tests/browser_session.test.js
 
 Versi: Streamlit 1.54.0, Pandas 2.3.3, Plotly 6.5.2, openpyxl 3.1.5, Pillow 10.4.0, psycopg/psycopg-binary 3.2.13, pytest 9.1.1, Node.js 24.11.0. Driver PostgreSQL dipasang di virtual environment proyek; pustaka yang telah tersedia digunakan dari lingkungan host melalui system-site-packages.
 
+### Tambahan contoh pivot — 30 Oktober 2026
+
+Seluruh suite Python dijalankan ulang setelah menambahkan contoh pivot di Panduan: **66 passed, 2 warnings in 28.20s**. Direktori sementara baru di `outputs/` dipakai melalui `--basetemp`, dengan `-p no:cacheprovider`, karena percobaan awal terhenti pada izin akses direktori sementara/cache lama sebelum tes berjalan.
+
+Pengujian tambahan memeriksa jumlah penduduk per dusun dan jenis kelamin, kesamaan total pivot dengan indikator Jumlah baris, kategori kosong, benturan label Total, cakupan kosong, penolakan dimensi pribadi/tidak tersedia, dan sumber yang tetap utuh. AppTest memeriksa filter dusun, perubahan baris/kolom, pemulihan pilihan setelah navigasi, eksekusi contoh kode yang menghasilkan tabel sama, serta dua sesi dengan pilihan berbeda tanpa mengubah desain dashboard. Pemeriksaan ini belum mencakup tampilan browser nyata.
+
 | Pemeriksaan | Hasil |
 | --- | --- |
 | Jumlah baris, nilai terisi, nilai unik, dan KK unik | Lulus |

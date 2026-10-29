@@ -171,6 +171,34 @@ def test_examples_inspection_save_and_guidance_pages(example):
     assert len(app.get('download_button'))==4
 
 
+def test_pivot_example_filters_dimensions_code_and_session_isolation():
+    import pandas as pd
+    a, b = start(), start()
+    design_a, design_b = deepcopy(a.session_state['design']), deepcopy(b.session_state['design'])
+    goto(a, 'Panduan')
+    goto(b, 'Panduan')
+    pivot = a.dataframe[1].value  # The visualization guide is the first table.
+    assert pivot.loc['Total', 'Total'] == 1019
+    a.multiselect(key='w_pivot_example_dusun').set_value(['Dusun I']).run()
+    healthy(a)
+    assert a.dataframe[1].value.loc['Total', 'Total'] == 204
+    assert b.dataframe[1].value.loc['Total', 'Total'] == 1019
+    select(a, 'Baris pivot', 'pendidikan')
+    select(a, 'Kolom pivot', 'pekerjaan')
+    assert a.dataframe[1].value.loc['Total', 'Total'] == 204
+    assert b.selectbox(key='w_pivot_example_rows').value == 'dusun'
+    namespace = {}
+    exec(a.code[0].value.rsplit('\nst.dataframe(pivot)', 1)[0], namespace)
+    pd.testing.assert_frame_equal(namespace['pivot'], a.dataframe[1].value)
+    goto(a, 'Pratinjau')
+    goto(a, 'Panduan')
+    assert a.selectbox(key='w_pivot_example_rows').value == 'pendidikan'
+    assert next(x for x in a.selectbox if x.label == 'Kolom pivot').value == 'pekerjaan'
+    assert a.multiselect(key='w_pivot_example_dusun').value == ['Dusun I']
+    assert a.session_state['design'] == design_a
+    assert b.session_state['design'] == design_b
+
+
 def test_draft_survives_navigation_and_filter_mapping_can_be_added_removed():
     app=start()
     app.button(key='start_blank').click().run()
